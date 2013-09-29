@@ -1,0 +1,47 @@
+Latest malware incidents demonstrated the enormous harm that modern worms can cause,
+but also showed that new breeds of malcode appear almost concurrently with the
+announcement of new vulnerabilities or even before them (a situation known as zero day
+vulnerability exploitation). Thus it is clear that traditional security applications such as
+firewalls, IDS or anti­viruses, while beneficial, no longer provide sufficient protection
+against rapidly spreading malware. Therefore, it is useful to explore other more radical
+protective mechanisms that can act complementary to the existing security infrastructure.
+To achieve that, it is essential to understand the propagation dynamics of fast spreading
+worms so as to identify the available time frames, in which reaction is both feasible and
+effective. Staniford proved that highly virulent worms are fully capable of infecting the
+susceptible population in less than 15 minutes, as in the case of a Warhol worm. Empirical
+evidence confirms the validity of these assumptions: the Slammer worm required only 10
+minutes to infect the vulnerable population using the simplest propagation strategy (random
+scanning), while the theoretical limits of an ultra­virulent worm fall well below the
+psychological one minute limit.
+
+To alleviate the effects of rapid malcode we propose a cooperative containment algorithm
+based on the following assumptions.
+1. The most vulnerable systems are personal computers whose respective owners do
+not have the time nor the skills to protect them sufficiently. In other words their
+owners are not security professionals that are constantly aware of the trends of
+malware activity. At best it is reasonable to expect the aforementioned to:
+a. Have enabled the automatic downloading and installation of the new updates
+and patches on their OS of choice (usually some flavor of Windows).
+b. Have installed some kind of security application. Most probably an anti­virus
+with automatic updating of signatures and a roughly configured firewall.
+Experienced users or small offices with a minimal IT infrastructure may also
+host an Intrusion Detection System.
+2. Fine grained security policies are perfectly suited for large organizations and
+enterprises that have valuable digital assets to protect in very complex environments
+with numerous different user groups, each one requiring different resources and
+access rights to perform their duty. On the other hand, small office or home office
+(SOHO) users can be sufficiently protected even with less detailed security policies.
+
+We are arguing by simply changing different predefined security policies it is
+possible to hold the attacks of most malware at bay. As most attacks have common
+attack vectors, such as the HTML engine of a popular e­mail client or the scripting
+abilities of an equally popular browser, by disabling these services only during worm
+epidemics and re­enabling them after the containment of the epidemic, we can
+adequately protect them against most threats. SOHO users on the other hand, may
+agree with a temporary hardening of their system in order to protect themselves
+against a malcode epidemic, but they are unlikely to accept a permanent disabling
+of their useful but not essential services and applications.
+
+Our algorithm is called PRoactive Malware Identification System ­ PROMIS and is based
+on a peer­to­peer (P2P) architecture to provide timely information to the members of a
+specially crafted P2P group.
