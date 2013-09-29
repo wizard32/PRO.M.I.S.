@@ -1,0 +1,6 @@
+-1	#seed [use -1 for random]	
+0.00005	#birth-rate
+1000	#maximum iteration number
+semi	#virus-feeder
+10	#number of preinfected nodes (only for manual or semi)
+0
