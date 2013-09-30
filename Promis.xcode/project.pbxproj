@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		2033BC8408E198A40019E822 = {
+			children = (
+				209A7E6708EABD1900AD7D46,
+				209A7E6808EABD1900AD7D46,
+				209A7E6908EABD1900AD7D46,
+				209A7E6A08EABD1900AD7D46,
+				2033BCA808E19AB30019E822,
+			);
+			isa = PBXGroup;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2033BC8608E198A40019E822 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				PREBINDING = NO;
+				REZ_SHOW_DEBUG_OUTPUT = NO;
+				VERSIONING_SYSTEM = "";
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2033BC8708E198A40019E822 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2033BC8808E198A40019E822 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2033BC8608E198A40019E822,
+				2033BC8708E198A40019E822,
+			);
+			hasScannedForEncodings = 0;
+			isa = PBXProject;
+			mainGroup = 2033BC8408E198A40019E822;
+			productRefGroup = 2033BCA808E19AB30019E822;
+			projectDirPath = "";
+			targets = (
+				2033BCA608E19AB30019E822,
+			);
+		};
+		2033BCA208E19AB30019E822 = {
+			buildActionMask = 2147483647;
+			files = (
+				209A7E6B08EABD1900AD7D46,
+				209A7E6C08EABD1900AD7D46,
+				209A7E6D08EABD1900AD7D46,
+				209A7E6E08EABD1900AD7D46,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2033BCA308E19AB30019E822 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2033BCA408E19AB30019E822 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXJavaArchiveBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2033BCA508E19AB30019E822 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2033BCA608E19AB30019E822 = {
+			buildPhases = (
+				2033BCA208E19AB30019E822,
+				2033BCA308E19AB30019E822,
+				2033BCA408E19AB30019E822,
+				2033BCA508E19AB30019E822,
+				209A7E6308EABC9900AD7D46,
+			);
+			buildSettings = {
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_COMPILER_DEPRECATED_WARNINGS = YES;
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Promis;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = Promis;
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = Promis;
+			productReference = 209A7E5908EAB8EF00AD7D46;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string></string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string></string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+	<key>Java</key>
+	<dict>
+		<key>ClassPath</key>
+		<array>
+			<string>/Users/vbill/Code/Promis/classes</string>
+			<string></string>
+		</array>
+		<key>JVMVersion</key>
+		<string>1.4+</string>
+		<key>MainClass</key>
+		<string>Simulation</string>
+		<key>Properties</key>
+		<dict>
+			<key>apple.awt.brushMetalLook</key>
+			<string>true</string>
+			<key>apple.awt.textantialiasing</key>
+			<string>true</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
+";
+		};
+		2033BCA808E19AB30019E822 = {
+			children = (
+				209A7E5908EAB8EF00AD7D46,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E5908EAB8EF00AD7D46 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			name = Promis.app;
+			path = build/Promis.app;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E6308EABC9900AD7D46 = {
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 15;
+			files = (
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		209A7E6708EABD1900AD7D46 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			name = Graph.java;
+			path = src/promis/Graph.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E6808EABD1900AD7D46 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			name = Node.java;
+			path = src/promis/Node.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E6908EABD1900AD7D46 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			name = SimpleIO.java;
+			path = src/promis/SimpleIO.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E6A08EABD1900AD7D46 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			name = Simulation.java;
+			path = src/promis/Simulation.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		209A7E6B08EABD1900AD7D46 = {
+			fileRef = 209A7E6708EABD1900AD7D46;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		209A7E6C08EABD1900AD7D46 = {
+			fileRef = 209A7E6808EABD1900AD7D46;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		209A7E6D08EABD1900AD7D46 = {
+			fileRef = 209A7E6908EABD1900AD7D46;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		209A7E6E08EABD1900AD7D46 = {
+			fileRef = 209A7E6A08EABD1900AD7D46;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 2033BC8808E198A40019E822;
+}
