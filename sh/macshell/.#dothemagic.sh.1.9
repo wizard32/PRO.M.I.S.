@@ -1,0 +1,75 @@
+
+cd ../../other/plots
+pwd
+rm -f ./plot.plt
+rm -f ./peer.plt
+rm -f ./Percentage_of_Infected_Population*
+rm -f ./Epidemic_Curve
+rm -f ./Global_Estimated_Rate
+rm -f ./Local_Estimated_Rate
+rm -f ./P2P
+rm -f ./Unconstraint_Model
+rm -f ./data.ps
+
+OSVERSION=`uname`
+echo $OSVERSION
+
+if `test  $OSVERSION = "Linux"`
+then
+	echo "Linux system found"
+	#rename the files in a proper style
+	CURVE=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 1` 
+	PERCENTAGE=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 2 | tail -n 1`  
+	GLOBAL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 3 | tail -n 1` 
+	LOCAL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 4 | tail -n 1` 
+	P2P=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 5 | tail -n 1` 
+	MODEL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $8 ; }' | head -n 6 | tail -n 1`
+else
+	echo "Non-Linux system  found - Darwin or Cygwin "
+        #rename the files in a proper style
+        CURVE=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 1`
+        PERCENTAGE=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 2 | tail -n 1`
+        GLOBAL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 3 | tail -n 1`
+        LOCAL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 4 | tail -n 1`
+        P2P=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 5 | tail -n 1`
+        MODEL=`ls -lt | head -n 7 | tail -n 6 | awk '{ print $9 ; }' | head -n 6 | tail -n 1` 
+fi
+echo $PERCENTAGE | xargs cat > "Percentage_of_Infected_Population * 100%"
+echo $CURVE | xargs cat > Epidemic_Curve 
+echo $GLOBAL| xargs cat > Global_Estimated_Rate
+echo $LOCAL | xargs cat > Local_Estimated_Rate
+echo $P2P | xargs cat >  P2P
+cd ../statistics
+N=`ls -lt | head -n 2 | tail -n 1 | awk '{ print $8 ; }' | xargs cat | grep "Total population" | head -n 1 | awk '{ print $3; }'` 
+p2=`ls -lt | head -n 2 | tail -n 1 | awk '{ print $8 ; }' | xargs cat | grep "P2P" | head -n 1 | awk '{ print $8; }'`
+R=`ls -lt | head -n 2 | tail -n 1 | awk '{ print $8 ; }' | xargs cat | grep "immune" | head -n 1 | awk '{ print $6; }'`
+I=`ls -lt | head -n 2 | tail -n 1 | awk '{ print $8 ; }' | xargs cat | grep "Initial" | head -n 1 | awk '{ print $4; }'`
+L=$(echo `wc -l ../../GraphTopology.txt | awk '{ print $1; }'`/2 | bc)
+
+echo "Graph size $N - Number of edges $L - Initial infected nodes $I - Initial immune nodes $R - P2P members $p2"
+
+echo "set grid" > plot.plt
+#echo "N=$N" >> plot.plt
+echo "set xrange[0:40]" >> plot.plt 
+echo "set title \"Population size $N - Initial infected nodes $I - Initial immune nodes $R - P2P members $p2 - Number of connections $L\"" >> plot.plt
+echo "set xlabel \"Time\"" >> plot.plt
+#echo 'plot "Percentage_of_Infected_Population * 100%" with linespoints, "Epidemic_Curve" with linespoints, \
+#"Global_Estimated_Rate" with linespoints, "Local_Estimated_Rate" with linespoints, 1 title "Total Population", ($N-$p2)/$p2'  >> plot.plt
+echo "plot \"Percentage_of_Infected_Population * 100%\" with linespoints, \"Epidemic_Curve\" with linespoints, \
+\"Global_Estimated_Rate\" with linespoints, \"Local_Estimated_Rate\" with linespoints, 1 title \"Total Population * $N\", ($N.0-$p2.0)/$N.0 title \"Non P2P Members * $N\""  >> plot.plt
+echo "pause -1" >> plot.plt
+echo "set terminal postscript" >> plot.plt
+echo "set output \"data.ps\"" >> plot.plt
+echo "replot" >> plot.plt
+
+mv ./plot.plt ../../other/plots/plot.plt
+
+echo  "set grid" > peer.plt
+echo  "set xrange[0:40]" >> peer.plt 
+#echo  "set style fill pattern border " >> peer.plt
+#echo "plot \"P2P\" using 1:2 with boxes, \"P2P\" using 1:3 with boxes, \"P2P\" using 1:4 with boxes, \"P2P\" using 1:5 with boxes, \"P2P\" using 1:6 with boxes" >> peer.plt
+#echo "plot \"P2P\" using 1:2 with filledcurves, \"P2P\" using 1:3 with filledcurves, \"P2P\" using 1:4 with filledcurves, \"P2P\" using 1:5 with filledcurves, \"P2P\" using 1:6 with filledcurves" >> peer.plt
+echo "plot \"P2P\" using 1:2 with linespoints, \"P2P\" using 1:3 with linespoints, \"P2P\" using 1:4 with linespoints, \"P2P\" using 1:5 with linespoints, \"P2P\" using 1:6 with linespoints" >> peer.plt
+#echo "plot \"P2P\" using 1:2 with impulses, \"P2P\" using 1:3 with impulses, \"P2P\" using 1:4 with impulses, \"P2P\" using 1:5 with impulses, \"P2P\" using 1:6 with impulses" >> peer.plt
+
+mv ./peer.plt ../../other/plots/peer.plt

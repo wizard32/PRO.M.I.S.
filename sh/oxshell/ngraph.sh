@@ -1,0 +1,42 @@
+#parse all files to create a script that finds the relative protection of peers 
+#intitialsize clean temp files 
+#taking in to account the p2p size
+cd ../../other/$1
+rm -f ./survivors.dat
+rm -f ./temp
+rm -f ./total.plt
+rm -f ./total.ps
+for i in `ls` 
+	do cd $i
+	pwd
+	P2PSIZE=`cat config.txt | tail -n 2 | head -n 1 | awk '{ print $1 ; }' | tr ';' ' '`
+	echo "P2PSIZE=$P2PSIZE"
+	#We take the rare case in which some of the survivors did not reach the highest security and therefore we add alla the intermediate 
+	#levels
+	SURVIVORS5=`tail -n 1 P2P | awk '{ print $6 ; }'`
+	SURVIVORS4=`tail -n 1 P2P | awk '{ print $5 ; }'`
+	SURVIVORS3=`tail -n 1 P2P | awk '{ print $4 ; }'`
+	SURVIVORS2=`tail -n 1 P2P | awk '{ print $3 ; }'`
+	SURVIVORS1=`tail -n 1 P2P | awk '{ print $2 ; }'`
+	SURVIVORS=`expr $SURVIVORS5 
+	#echo -e "$SURVIVORS\t$P2PSIZE" >> ../temp
+	RATE=`expr "$SURVIVORS/$P2PSIZE" | bc`
+	echo "RATE=$RATE"
+	echo -e "$P2PSIZE\t$SURVIVORS" >> ../temp
+	N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
+	echo "<------------------------------------------------------------------------->"
+	cd ..
+done 
+sort -g temp > survivors.dat
+rm -f ./temp
+
+echo "set title \"Total Population $N Nodes \"" > total.plt
+echo "set xlabel \"P2P Members\"" >> total.plt
+echo "set ylabel \"Survived Nodes\"" >> total.plt
+echo "plot \"survivors.dat\" with linespoints lt -1 pt 6 title \"\"" >> total.plt
+echo "pause -1" >> total.plt
+echo "set terminal postscript" >> total.plt
+echo "set output \"total.ps\"" >> total.plt
+echo "replot" >> total.plt
+echo "q" >> total.plt
+
