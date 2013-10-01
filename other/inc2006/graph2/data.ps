@@ -1,0 +1,3964 @@
+%!PS-Adobe-2.0
+%%Title: data.ps
+%%Creator: gnuplot 4.0 patchlevel 0
+%%CreationDate: Mon Mar 27 10:14:27 2006
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+/gnudict 256 dict def
+gnudict begin
+/Color false def
+/Solid false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/vshift -46 def
+/dl {10.0 mul} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/Rounded false def
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow { currentpoint stroke M
+  0 vshift R show } def
+/Rshow { currentpoint stroke M
+  dup stringwidth pop neg vshift R show } def
+/Cshow { currentpoint stroke M
+  dup stringwidth pop -2 div vshift R show } def
+/UP { dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def } def
+/DL { Color {setrgbcolor Solid {pop []} if 0 setdash }
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse } def
+/BL { stroke userlinewidth 2 mul setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/AL { stroke userlinewidth 2 div setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/UL { dup gnulinewidth mul /userlinewidth exch def
+      dup 1 lt {pop 1} if 10 mul /udl exch def } def
+/PL { stroke userlinewidth setlinewidth
+      Rounded { 1 setlinejoin 1 setlinecap } if } def
+/LTw { PL [] 1 setgray } def
+/LTb { BL [] 0 0 0 DL } def
+/LTa { AL [1 udl mul 2 udl mul] 0 setdash 0 0 0 setrgbcolor } def
+/LT0 { PL [] 1 0 0 DL } def
+/LT1 { PL [4 dl 2 dl] 0 1 0 DL } def
+/LT2 { PL [2 dl 3 dl] 0 0 1 DL } def
+/LT3 { PL [1 dl 1.5 dl] 1 0 1 DL } def
+/LT4 { PL [5 dl 2 dl 1 dl 2 dl] 0 1 1 DL } def
+/LT5 { PL [4 dl 3 dl 1 dl 3 dl] 1 1 0 DL } def
+/LT6 { PL [2 dl 2 dl 2 dl 4 dl] 0 0 0 DL } def
+/LT7 { PL [2 dl 2 dl 2 dl 2 dl 2 dl 4 dl] 1 0.3 0 DL } def
+/LT8 { PL [2 dl 2 dl 2 dl 2 dl 2 dl 2 dl 2 dl 4 dl] 0.5 0.5 0.5 DL } def
+/Pnt { stroke [] 0 setdash
+   gsave 1 setlinecap M 0 0 V stroke grestore } def
+/Dia { stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt } def
+/Pls { stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+  } def
+/Box { stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt } def
+/Crs { stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke } def
+/TriU { stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt  } def
+/Star { 2 copy Pls Crs } def
+/BoxF { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V  hpt2 0 V  0 vpt2 V
+  hpt2 neg 0 V  closepath fill } def
+/TriUF { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill } def
+/TriD { stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt  } def
+/TriDF { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill } def
+/Pent { stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt } def
+/PentF { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore } def
+/Circle { stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt } def
+/CircleF { stroke [] 0 setdash hpt 0 360 arc fill } def
+/C0 { BL [] 0 setdash 2 copy moveto vpt 90 450  arc } bind def
+/C1 { BL [] 0 setdash 2 copy        moveto
+       2 copy  vpt 0 90 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C2 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 90 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C3 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C4 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 180 270 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C5 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 90 arc
+       2 copy moveto
+       2 copy  vpt 180 270 arc closepath fill
+               vpt 0 360 arc } bind def
+/C6 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 90 270 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C7 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 0 270 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C8 { BL [] 0 setdash 2 copy moveto
+      2 copy vpt 270 360 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C9 { BL [] 0 setdash 2 copy moveto
+      2 copy  vpt 270 450 arc closepath fill
+              vpt 0 360 arc closepath } bind def
+/C10 { BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+       2 copy moveto
+       2 copy vpt 90 180 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C11 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 0 180 arc closepath fill
+       2 copy moveto
+       2 copy  vpt 270 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C12 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 180 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C13 { BL [] 0 setdash  2 copy moveto
+       2 copy  vpt 0 90 arc closepath fill
+       2 copy moveto
+       2 copy  vpt 180 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/C14 { BL [] 0 setdash 2 copy moveto
+       2 copy  vpt 90 360 arc closepath fill
+               vpt 0 360 arc } bind def
+/C15 { BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+               vpt 0 360 arc closepath } bind def
+/Rec   { newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+       neg 0 rlineto closepath } bind def
+/Square { dup Rec } bind def
+/Bsquare { vpt sub exch vpt sub exch vpt2 Square } bind def
+/S0 { BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare } bind def
+/S1 { BL [] 0 setdash 2 copy vpt Square fill Bsquare } bind def
+/S2 { BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare } bind def
+/S3 { BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare } bind def
+/S4 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare } bind def
+/S5 { BL [] 0 setdash 2 copy 2 copy vpt Square fill
+       exch vpt sub exch vpt sub vpt Square fill Bsquare } bind def
+/S6 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare } bind def
+/S7 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+       2 copy vpt Square fill
+       Bsquare } bind def
+/S8 { BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare } bind def
+/S9 { BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare } bind def
+/S10 { BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+       Bsquare } bind def
+/S11 { BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+       Bsquare } bind def
+/S12 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare } bind def
+/S13 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+       2 copy vpt Square fill Bsquare } bind def
+/S14 { BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+       2 copy exch vpt sub exch vpt Square fill Bsquare } bind def
+/S15 { BL [] 0 setdash 2 copy Bsquare fill Bsquare } bind def
+/D0 { gsave translate 45 rotate 0 0 S0 stroke grestore } bind def
+/D1 { gsave translate 45 rotate 0 0 S1 stroke grestore } bind def
+/D2 { gsave translate 45 rotate 0 0 S2 stroke grestore } bind def
+/D3 { gsave translate 45 rotate 0 0 S3 stroke grestore } bind def
+/D4 { gsave translate 45 rotate 0 0 S4 stroke grestore } bind def
+/D5 { gsave translate 45 rotate 0 0 S5 stroke grestore } bind def
+/D6 { gsave translate 45 rotate 0 0 S6 stroke grestore } bind def
+/D7 { gsave translate 45 rotate 0 0 S7 stroke grestore } bind def
+/D8 { gsave translate 45 rotate 0 0 S8 stroke grestore } bind def
+/D9 { gsave translate 45 rotate 0 0 S9 stroke grestore } bind def
+/D10 { gsave translate 45 rotate 0 0 S10 stroke grestore } bind def
+/D11 { gsave translate 45 rotate 0 0 S11 stroke grestore } bind def
+/D12 { gsave translate 45 rotate 0 0 S12 stroke grestore } bind def
+/D13 { gsave translate 45 rotate 0 0 S13 stroke grestore } bind def
+/D14 { gsave translate 45 rotate 0 0 S14 stroke grestore } bind def
+/D15 { gsave translate 45 rotate 0 0 S15 stroke grestore } bind def
+/DiaE { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke } def
+/BoxE { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke } def
+/TriUE { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke } def
+/TriDE { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke } def
+/PentE { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore } def
+/CircE { stroke [] 0 setdash 
+  hpt 0 360 arc stroke } def
+/Opaque { gsave closepath 1 setgray fill grestore 0 setgray closepath } def
+/DiaW { stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke } def
+/BoxW { stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke } def
+/TriUW { stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke } def
+/TriDW { stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke } def
+/PentW { stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore } def
+/CircW { stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke } def
+/BoxFill { gsave Rec 1 setgray fill grestore } def
+/BoxColFill {
+  gsave Rec
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor
+  fill grestore } def
+%
+% PostScript Level 1 Pattern Fill routine
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill { gsave /PFa [ 9 2 roll ] def
+    PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+    PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+    gsave 1 setgray fill grestore clip
+    currentlinewidth 0.5 mul setlinewidth
+    /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+    0 0 M PFa 5 get rotate PFs -2 div dup translate
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{ PFa 4 get mul 0 M 0 PFs V } for
+    0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{ PFa 4 get mul 0 2 1 roll M PFs 0 V } for
+    } if
+    stroke grestore } def
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+1.000 UL
+LTb
+574 420 M
+63 0 V
+6325 0 R
+-63 0 V
+490 420 M
+gsave 0 setgray
+( 0) Rshow
+grestore
+1.000 UL
+LTb
+574 1260 M
+63 0 V
+6325 0 R
+-63 0 V
+-6409 0 R
+gsave 0 setgray
+( 0.2) Rshow
+grestore
+1.000 UL
+LTb
+574 2100 M
+63 0 V
+6325 0 R
+-63 0 V
+-6409 0 R
+gsave 0 setgray
+( 0.4) Rshow
+grestore
+1.000 UL
+LTb
+574 2940 M
+63 0 V
+6325 0 R
+-63 0 V
+-6409 0 R
+gsave 0 setgray
+( 0.6) Rshow
+grestore
+1.000 UL
+LTb
+574 3780 M
+63 0 V
+6325 0 R
+-63 0 V
+-6409 0 R
+gsave 0 setgray
+( 0.8) Rshow
+grestore
+1.000 UL
+LTb
+574 4620 M
+63 0 V
+6325 0 R
+-63 0 V
+-6409 0 R
+gsave 0 setgray
+( 1) Rshow
+grestore
+1.000 UL
+LTb
+574 420 M
+0 63 V
+0 4137 R
+0 -63 V
+574 280 M
+gsave 0 setgray
+( 0) Cshow
+grestore
+1.000 UL
+LTb
+1373 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 50) Cshow
+grestore
+1.000 UL
+LTb
+2171 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 100) Cshow
+grestore
+1.000 UL
+LTb
+2970 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 150) Cshow
+grestore
+1.000 UL
+LTb
+3768 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 200) Cshow
+grestore
+1.000 UL
+LTb
+4567 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 250) Cshow
+grestore
+1.000 UL
+LTb
+5365 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 300) Cshow
+grestore
+1.000 UL
+LTb
+6164 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 350) Cshow
+grestore
+1.000 UL
+LTb
+6962 420 M
+0 63 V
+0 4137 R
+0 -63 V
+0 -4277 R
+gsave 0 setgray
+( 400) Cshow
+grestore
+1.000 UL
+LTb
+1.000 UL
+LTb
+574 420 M
+6388 0 V
+0 4200 V
+-6388 0 V
+574 420 L
+LTb
+3768 70 M
+gsave 0 setgray
+(Time) Cshow
+grestore
+LTb
+3768 4830 M
+gsave 0 setgray
+(Population size 2000 - Initial infected nodes 10 - Initial immune nodes 1 - P2P members 399 - Number of connections 50918) Cshow
+grestore
+1.000 UP
+1.000 UP
+1.000 UL
+LT0
+LTb
+6311 4487 M
+gsave 0 setgray
+(Epidemic Curve) Rshow
+grestore
+LT0
+6395 4487 M
+399 0 V
+574 420 M
+16 2 V
+16 0 V
+16 4 V
+16 -4 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+15 4 V
+16 -2 V
+16 -2 V
+16 2 V
+16 6 V
+16 3 V
+16 -5 V
+16 -2 V
+16 0 V
+16 -2 V
+16 0 V
+16 6 V
+16 5 V
+16 -7 V
+16 2 V
+16 3 V
+16 2 V
+16 -5 V
+16 0 V
+16 0 V
+16 3 V
+16 -7 V
+16 9 V
+16 4 V
+16 -6 V
+16 2 V
+16 2 V
+16 -2 V
+16 4 V
+16 2 V
+16 -2 V
+16 6 V
+16 4 V
+16 -19 V
+15 11 V
+16 0 V
+16 2 V
+16 6 V
+16 -6 V
+16 2 V
+16 2 V
+16 -2 V
+16 8 V
+16 -6 V
+16 -2 V
+16 6 V
+16 2 V
+16 -8 V
+16 4 V
+16 9 V
+16 -25 V
+16 20 V
+16 -2 V
+16 11 V
+16 -6 V
+16 6 V
+16 13 V
+16 -11 V
+16 -2 V
+16 -9 V
+16 3 V
+16 -5 V
+16 5 V
+16 8 V
+16 2 V
+16 -2 V
+16 11 V
+15 -22 V
+16 11 V
+16 -15 V
+16 2 V
+16 21 V
+16 -27 V
+16 13 V
+16 -11 V
+16 11 V
+16 2 V
+16 0 V
+16 -2 V
+16 -7 V
+16 2 V
+16 3 V
+16 2 V
+16 -11 V
+16 4 V
+16 13 V
+stroke
+2203 462 M
+16 -11 V
+16 -8 V
+16 30 V
+16 -28 V
+16 0 V
+16 0 V
+16 0 V
+16 11 V
+16 -15 V
+16 8 V
+16 -4 V
+16 11 V
+16 2 V
+16 -7 V
+15 -2 V
+16 -8 V
+16 10 V
+16 -10 V
+16 -4 V
+16 2 V
+16 15 V
+16 -23 V
+16 29 V
+16 -19 V
+16 10 V
+16 -2 V
+16 -4 V
+16 -4 V
+16 -4 V
+16 17 V
+16 -9 V
+16 -2 V
+16 -6 V
+16 -9 V
+16 11 V
+16 0 V
+16 -4 V
+16 -2 V
+16 0 V
+16 12 V
+16 -10 V
+16 -4 V
+16 16 V
+16 -14 V
+16 -9 V
+16 0 V
+16 9 V
+16 -11 V
+15 13 V
+16 -2 V
+16 2 V
+16 -7 V
+16 11 V
+16 -4 V
+16 -4 V
+16 4 V
+16 -4 V
+16 -3 V
+16 5 V
+16 -11 V
+16 6 V
+16 0 V
+16 -6 V
+16 2 V
+16 0 V
+16 2 V
+16 7 V
+16 -2 V
+16 -3 V
+16 -2 V
+16 -6 V
+16 6 V
+16 2 V
+16 11 V
+16 -11 V
+16 5 V
+16 0 V
+16 -9 V
+16 9 V
+16 -5 V
+16 -4 V
+15 7 V
+16 -9 V
+16 6 V
+16 -6 V
+16 6 V
+16 0 V
+16 -4 V
+16 0 V
+16 -2 V
+16 0 V
+16 2 V
+16 -4 V
+16 2 V
+16 0 V
+16 2 V
+16 -4 V
+16 4 V
+16 7 V
+16 -7 V
+16 -2 V
+16 2 V
+16 -4 V
+16 4 V
+stroke
+3864 424 M
+16 0 V
+16 2 V
+16 -4 V
+16 2 V
+16 2 V
+16 -6 V
+16 8 V
+16 -4 V
+16 -4 V
+16 2 V
+15 -2 V
+16 0 V
+16 2 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 4 V
+16 2 V
+16 -6 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 4 V
+16 -6 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 -2 V
+16 0 V
+16 4 V
+16 -4 V
+16 0 V
+16 0 V
+16 0 V
+16 4 V
+16 -4 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+15 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 -2 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+stroke
+5525 420 M
+16 2 V
+16 -2 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+15 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+574 420 Pls
+590 422 Pls
+606 422 Pls
+622 426 Pls
+638 422 Pls
+654 422 Pls
+670 424 Pls
+686 422 Pls
+702 422 Pls
+718 420 Pls
+734 420 Pls
+750 420 Pls
+766 420 Pls
+782 420 Pls
+798 422 Pls
+814 420 Pls
+830 420 Pls
+845 424 Pls
+861 422 Pls
+877 420 Pls
+893 422 Pls
+909 428 Pls
+925 431 Pls
+941 426 Pls
+957 424 Pls
+973 424 Pls
+989 422 Pls
+1005 422 Pls
+1021 428 Pls
+1037 433 Pls
+1053 426 Pls
+1069 428 Pls
+1085 431 Pls
+1101 433 Pls
+1117 428 Pls
+1133 428 Pls
+1149 428 Pls
+1165 431 Pls
+1181 424 Pls
+1197 433 Pls
+1213 437 Pls
+1229 431 Pls
+1245 433 Pls
+1261 435 Pls
+1277 433 Pls
+1293 437 Pls
+1309 439 Pls
+1325 437 Pls
+1341 443 Pls
+1357 447 Pls
+1373 428 Pls
+1388 439 Pls
+1404 439 Pls
+1420 441 Pls
+1436 447 Pls
+1452 441 Pls
+1468 443 Pls
+1484 445 Pls
+1500 443 Pls
+1516 451 Pls
+1532 445 Pls
+1548 443 Pls
+1564 449 Pls
+1580 451 Pls
+1596 443 Pls
+1612 447 Pls
+1628 456 Pls
+1644 431 Pls
+1660 451 Pls
+1676 449 Pls
+1692 460 Pls
+1708 454 Pls
+1724 460 Pls
+1740 473 Pls
+1756 462 Pls
+1772 460 Pls
+1788 451 Pls
+1804 454 Pls
+1820 449 Pls
+1836 454 Pls
+1852 462 Pls
+1868 464 Pls
+1884 462 Pls
+1900 473 Pls
+1915 451 Pls
+1931 462 Pls
+1947 447 Pls
+1963 449 Pls
+1979 470 Pls
+1995 443 Pls
+2011 456 Pls
+2027 445 Pls
+2043 456 Pls
+2059 458 Pls
+2075 458 Pls
+2091 456 Pls
+2107 449 Pls
+2123 451 Pls
+2139 454 Pls
+2155 456 Pls
+2171 445 Pls
+2187 449 Pls
+2203 462 Pls
+2219 451 Pls
+2235 443 Pls
+2251 473 Pls
+2267 445 Pls
+2283 445 Pls
+2299 445 Pls
+2315 445 Pls
+2331 456 Pls
+2347 441 Pls
+2363 449 Pls
+2379 445 Pls
+2395 456 Pls
+2411 458 Pls
+2427 451 Pls
+2442 449 Pls
+2458 441 Pls
+2474 451 Pls
+2490 441 Pls
+2506 437 Pls
+2522 439 Pls
+2538 454 Pls
+2554 431 Pls
+2570 460 Pls
+2586 441 Pls
+2602 451 Pls
+2618 449 Pls
+2634 445 Pls
+2650 441 Pls
+2666 437 Pls
+2682 454 Pls
+2698 445 Pls
+2714 443 Pls
+2730 437 Pls
+2746 428 Pls
+2762 439 Pls
+2778 439 Pls
+2794 435 Pls
+2810 433 Pls
+2826 433 Pls
+2842 445 Pls
+2858 435 Pls
+2874 431 Pls
+2890 447 Pls
+2906 433 Pls
+2922 424 Pls
+2938 424 Pls
+2954 433 Pls
+2970 422 Pls
+2985 435 Pls
+3001 433 Pls
+3017 435 Pls
+3033 428 Pls
+3049 439 Pls
+3065 435 Pls
+3081 431 Pls
+3097 435 Pls
+3113 431 Pls
+3129 428 Pls
+3145 433 Pls
+3161 422 Pls
+3177 428 Pls
+3193 428 Pls
+3209 422 Pls
+3225 424 Pls
+3241 424 Pls
+3257 426 Pls
+3273 433 Pls
+3289 431 Pls
+3305 428 Pls
+3321 426 Pls
+3337 420 Pls
+3353 426 Pls
+3369 428 Pls
+3385 439 Pls
+3401 428 Pls
+3417 433 Pls
+3433 433 Pls
+3449 424 Pls
+3465 433 Pls
+3481 428 Pls
+3497 424 Pls
+3512 431 Pls
+3528 422 Pls
+3544 428 Pls
+3560 422 Pls
+3576 428 Pls
+3592 428 Pls
+3608 424 Pls
+3624 424 Pls
+3640 422 Pls
+3656 422 Pls
+3672 424 Pls
+3688 420 Pls
+3704 422 Pls
+3720 422 Pls
+3736 424 Pls
+3752 420 Pls
+3768 424 Pls
+3784 431 Pls
+3800 424 Pls
+3816 422 Pls
+3832 424 Pls
+3848 420 Pls
+3864 424 Pls
+3880 424 Pls
+3896 426 Pls
+3912 422 Pls
+3928 424 Pls
+3944 426 Pls
+3960 420 Pls
+3976 428 Pls
+3992 424 Pls
+4008 420 Pls
+4024 422 Pls
+4039 420 Pls
+4055 420 Pls
+4071 422 Pls
+4087 422 Pls
+4103 420 Pls
+4119 420 Pls
+4135 420 Pls
+4151 422 Pls
+4167 420 Pls
+4183 424 Pls
+4199 426 Pls
+4215 420 Pls
+4231 422 Pls
+4247 422 Pls
+4263 422 Pls
+4279 422 Pls
+4295 426 Pls
+4311 420 Pls
+4327 420 Pls
+4343 420 Pls
+4359 422 Pls
+4375 422 Pls
+4391 420 Pls
+4407 420 Pls
+4423 424 Pls
+4439 420 Pls
+4455 420 Pls
+4471 420 Pls
+4487 420 Pls
+4503 424 Pls
+4519 420 Pls
+4535 420 Pls
+4551 420 Pls
+4567 420 Pls
+4582 420 Pls
+4598 420 Pls
+4614 420 Pls
+4630 420 Pls
+4646 422 Pls
+4662 420 Pls
+4678 422 Pls
+4694 420 Pls
+4710 420 Pls
+4726 420 Pls
+4742 420 Pls
+4758 422 Pls
+4774 420 Pls
+4790 420 Pls
+4806 420 Pls
+4822 420 Pls
+4838 420 Pls
+4854 420 Pls
+4870 420 Pls
+4886 420 Pls
+4902 420 Pls
+4918 420 Pls
+4934 420 Pls
+4950 420 Pls
+4966 420 Pls
+4982 420 Pls
+4998 422 Pls
+5014 420 Pls
+5030 420 Pls
+5046 422 Pls
+5062 420 Pls
+5078 420 Pls
+5094 420 Pls
+5109 422 Pls
+5125 420 Pls
+5141 420 Pls
+5157 420 Pls
+5173 420 Pls
+5189 420 Pls
+5205 422 Pls
+5221 422 Pls
+5237 420 Pls
+5253 422 Pls
+5269 420 Pls
+5285 420 Pls
+5301 420 Pls
+5317 422 Pls
+5333 420 Pls
+5349 420 Pls
+5365 420 Pls
+5381 420 Pls
+5397 420 Pls
+5413 420 Pls
+5429 420 Pls
+5445 420 Pls
+5461 420 Pls
+5477 420 Pls
+5493 420 Pls
+5509 420 Pls
+5525 420 Pls
+5541 422 Pls
+5557 420 Pls
+5573 420 Pls
+5589 422 Pls
+5605 420 Pls
+5621 420 Pls
+5636 420 Pls
+5652 420 Pls
+5668 422 Pls
+5684 420 Pls
+5700 420 Pls
+5716 420 Pls
+5732 422 Pls
+5748 420 Pls
+5764 420 Pls
+5780 420 Pls
+5796 420 Pls
+5812 420 Pls
+5828 420 Pls
+5844 422 Pls
+5860 420 Pls
+5876 420 Pls
+5892 420 Pls
+5908 420 Pls
+5924 420 Pls
+5940 420 Pls
+5956 420 Pls
+5972 420 Pls
+5988 420 Pls
+6004 420 Pls
+6020 420 Pls
+6036 420 Pls
+6052 422 Pls
+6068 422 Pls
+6084 420 Pls
+6100 420 Pls
+6116 420 Pls
+6132 420 Pls
+6148 420 Pls
+6164 420 Pls
+6179 420 Pls
+6195 420 Pls
+6211 420 Pls
+6227 420 Pls
+6243 420 Pls
+6259 420 Pls
+6275 420 Pls
+6291 420 Pls
+6307 420 Pls
+6323 420 Pls
+6339 420 Pls
+6355 420 Pls
+6371 420 Pls
+6387 420 Pls
+6403 420 Pls
+6419 420 Pls
+6435 420 Pls
+6451 420 Pls
+6467 420 Pls
+6483 420 Pls
+6499 420 Pls
+6515 420 Pls
+6531 420 Pls
+6547 420 Pls
+6563 420 Pls
+6579 420 Pls
+6595 420 Pls
+6611 420 Pls
+6627 420 Pls
+6643 420 Pls
+6659 420 Pls
+6675 420 Pls
+6691 420 Pls
+6706 420 Pls
+6722 420 Pls
+6738 420 Pls
+6754 420 Pls
+6770 420 Pls
+6786 420 Pls
+6802 420 Pls
+6818 420 Pls
+6834 420 Pls
+6850 420 Pls
+6866 420 Pls
+6882 420 Pls
+6898 420 Pls
+6914 420 Pls
+6930 422 Pls
+6594 4487 Pls
+1.000 UP
+1.000 UL
+LT1
+LTb
+6311 4347 M
+gsave 0 setgray
+(Global Estimated Rate) Rshow
+grestore
+LT1
+6395 4347 M
+399 0 V
+574 420 M
+16 0 V
+16 0 V
+16 0 V
+16 11 V
+16 12 V
+16 34 V
+16 0 V
+16 48 V
+16 6 V
+16 20 V
+16 -60 V
+16 -28 V
+16 -7 V
+16 0 V
+16 -36 V
+16 0 V
+15 0 V
+16 0 V
+16 183 V
+16 5 V
+16 -20 V
+16 -2 V
+16 259 V
+16 52 V
+16 -52 V
+16 185 V
+16 99 V
+16 18 V
+16 -53 V
+16 -101 V
+16 200 V
+16 165 V
+16 -13 V
+16 -188 V
+16 44 V
+16 205 V
+16 94 V
+16 -65 V
+16 -34 V
+16 -145 V
+16 41 V
+16 209 V
+16 -165 V
+16 5 V
+16 68 V
+16 -45 V
+16 148 V
+16 31 V
+16 178 V
+16 49 V
+15 89 V
+16 -200 V
+16 -4 V
+16 -146 V
+16 -129 V
+16 -52 V
+16 -68 V
+16 5 V
+16 -121 V
+16 52 V
+16 -17 V
+16 -54 V
+16 -44 V
+16 -65 V
+16 -30 V
+16 15 V
+16 -37 V
+16 68 V
+16 -77 V
+16 35 V
+16 -43 V
+16 -5 V
+16 1 V
+16 -6 V
+16 9 V
+16 -22 V
+16 2 V
+16 -8 V
+16 -73 V
+16 -21 V
+16 -34 V
+16 16 V
+16 16 V
+15 -19 V
+16 73 V
+16 -48 V
+16 13 V
+16 -34 V
+16 -61 V
+16 12 V
+16 -31 V
+16 -44 V
+16 10 V
+16 -38 V
+16 9 V
+16 32 V
+16 -7 V
+16 -21 V
+16 -19 V
+16 -7 V
+16 -2 V
+16 -11 V
+stroke
+2203 634 M
+16 -31 V
+16 0 V
+16 -11 V
+16 -17 V
+16 46 V
+16 -15 V
+16 -16 V
+16 -15 V
+16 -17 V
+16 12 V
+16 -2 V
+16 -9 V
+16 1 V
+16 2 V
+15 0 V
+16 -1 V
+16 4 V
+16 -10 V
+16 -5 V
+16 -9 V
+16 -12 V
+16 -9 V
+16 17 V
+16 -22 V
+16 20 V
+16 -7 V
+16 6 V
+16 2 V
+16 3 V
+16 -18 V
+16 -3 V
+16 -2 V
+16 -6 V
+16 8 V
+16 -5 V
+16 -6 V
+16 -1 V
+16 -3 V
+16 -5 V
+16 -12 V
+16 -5 V
+16 0 V
+16 1 V
+16 -3 V
+16 14 V
+16 -10 V
+16 -5 V
+16 -8 V
+15 -5 V
+16 -8 V
+16 4 V
+16 -7 V
+16 -1 V
+16 4 V
+16 13 V
+16 3 V
+16 0 V
+16 -3 V
+16 -4 V
+16 -1 V
+16 4 V
+16 -13 V
+16 -3 V
+16 -4 V
+16 -7 V
+16 -1 V
+16 -7 V
+16 -2 V
+16 5 V
+16 1 V
+16 4 V
+16 -2 V
+16 -4 V
+16 2 V
+16 1 V
+16 10 V
+16 -2 V
+16 4 V
+16 4 V
+16 3 V
+16 -2 V
+15 -4 V
+16 -4 V
+16 0 V
+16 -6 V
+16 -6 V
+16 -2 V
+16 2 V
+16 1 V
+16 0 V
+16 -3 V
+16 -1 V
+16 -4 V
+16 -2 V
+16 -3 V
+16 -1 V
+16 -1 V
+16 0 V
+16 -1 V
+16 1 V
+16 5 V
+16 1 V
+16 -1 V
+16 2 V
+stroke
+3864 429 M
+16 -2 V
+16 1 V
+16 -1 V
+16 -1 V
+16 1 V
+16 1 V
+16 -2 V
+16 0 V
+16 4 V
+16 -2 V
+15 -4 V
+16 -1 V
+16 0 V
+16 -1 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 1 V
+16 0 V
+16 0 V
+16 1 V
+16 0 V
+16 0 V
+16 2 V
+16 -1 V
+16 1 V
+16 0 V
+16 -1 V
+16 0 V
+16 -1 V
+16 0 V
+16 -1 V
+16 -1 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+stroke
+5525 420 M
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+574 420 Crs
+590 420 Crs
+606 420 Crs
+622 420 Crs
+638 431 Crs
+654 443 Crs
+670 477 Crs
+686 477 Crs
+702 525 Crs
+718 531 Crs
+734 551 Crs
+750 491 Crs
+766 463 Crs
+782 456 Crs
+798 456 Crs
+814 420 Crs
+830 420 Crs
+845 420 Crs
+861 420 Crs
+877 603 Crs
+893 608 Crs
+909 588 Crs
+925 586 Crs
+941 845 Crs
+957 897 Crs
+973 845 Crs
+989 1030 Crs
+1005 1129 Crs
+1021 1147 Crs
+1037 1094 Crs
+1053 993 Crs
+1069 1193 Crs
+1085 1358 Crs
+1101 1345 Crs
+1117 1157 Crs
+1133 1201 Crs
+1149 1406 Crs
+1165 1500 Crs
+1181 1435 Crs
+1197 1401 Crs
+1213 1256 Crs
+1229 1297 Crs
+1245 1506 Crs
+1261 1341 Crs
+1277 1346 Crs
+1293 1414 Crs
+1309 1369 Crs
+1325 1517 Crs
+1341 1548 Crs
+1357 1726 Crs
+1373 1775 Crs
+1388 1864 Crs
+1404 1664 Crs
+1420 1660 Crs
+1436 1514 Crs
+1452 1385 Crs
+1468 1333 Crs
+1484 1265 Crs
+1500 1270 Crs
+1516 1149 Crs
+1532 1201 Crs
+1548 1184 Crs
+1564 1130 Crs
+1580 1086 Crs
+1596 1021 Crs
+1612 991 Crs
+1628 1006 Crs
+1644 969 Crs
+1660 1037 Crs
+1676 960 Crs
+1692 995 Crs
+1708 952 Crs
+1724 947 Crs
+1740 948 Crs
+1756 942 Crs
+1772 951 Crs
+1788 929 Crs
+1804 931 Crs
+1820 923 Crs
+1836 850 Crs
+1852 829 Crs
+1868 795 Crs
+1884 811 Crs
+1900 827 Crs
+1915 808 Crs
+1931 881 Crs
+1947 833 Crs
+1963 846 Crs
+1979 812 Crs
+1995 751 Crs
+2011 763 Crs
+2027 732 Crs
+2043 688 Crs
+2059 698 Crs
+2075 660 Crs
+2091 669 Crs
+2107 701 Crs
+2123 694 Crs
+2139 673 Crs
+2155 654 Crs
+2171 647 Crs
+2187 645 Crs
+2203 634 Crs
+2219 603 Crs
+2235 603 Crs
+2251 592 Crs
+2267 575 Crs
+2283 621 Crs
+2299 606 Crs
+2315 590 Crs
+2331 575 Crs
+2347 558 Crs
+2363 570 Crs
+2379 568 Crs
+2395 559 Crs
+2411 560 Crs
+2427 562 Crs
+2442 562 Crs
+2458 561 Crs
+2474 565 Crs
+2490 555 Crs
+2506 550 Crs
+2522 541 Crs
+2538 529 Crs
+2554 520 Crs
+2570 537 Crs
+2586 515 Crs
+2602 535 Crs
+2618 528 Crs
+2634 534 Crs
+2650 536 Crs
+2666 539 Crs
+2682 521 Crs
+2698 518 Crs
+2714 516 Crs
+2730 510 Crs
+2746 518 Crs
+2762 513 Crs
+2778 507 Crs
+2794 506 Crs
+2810 503 Crs
+2826 498 Crs
+2842 486 Crs
+2858 481 Crs
+2874 481 Crs
+2890 482 Crs
+2906 479 Crs
+2922 493 Crs
+2938 483 Crs
+2954 478 Crs
+2970 470 Crs
+2985 465 Crs
+3001 457 Crs
+3017 461 Crs
+3033 454 Crs
+3049 453 Crs
+3065 457 Crs
+3081 470 Crs
+3097 473 Crs
+3113 473 Crs
+3129 470 Crs
+3145 466 Crs
+3161 465 Crs
+3177 469 Crs
+3193 456 Crs
+3209 453 Crs
+3225 449 Crs
+3241 442 Crs
+3257 441 Crs
+3273 434 Crs
+3289 432 Crs
+3305 437 Crs
+3321 438 Crs
+3337 442 Crs
+3353 440 Crs
+3369 436 Crs
+3385 438 Crs
+3401 439 Crs
+3417 449 Crs
+3433 447 Crs
+3449 451 Crs
+3465 455 Crs
+3481 458 Crs
+3497 456 Crs
+3512 452 Crs
+3528 448 Crs
+3544 448 Crs
+3560 442 Crs
+3576 436 Crs
+3592 434 Crs
+3608 436 Crs
+3624 437 Crs
+3640 437 Crs
+3656 434 Crs
+3672 433 Crs
+3688 429 Crs
+3704 427 Crs
+3720 424 Crs
+3736 423 Crs
+3752 422 Crs
+3768 422 Crs
+3784 421 Crs
+3800 422 Crs
+3816 427 Crs
+3832 428 Crs
+3848 427 Crs
+3864 429 Crs
+3880 427 Crs
+3896 428 Crs
+3912 427 Crs
+3928 426 Crs
+3944 427 Crs
+3960 428 Crs
+3976 426 Crs
+3992 426 Crs
+4008 430 Crs
+4024 428 Crs
+4039 424 Crs
+4055 423 Crs
+4071 423 Crs
+4087 422 Crs
+4103 422 Crs
+4119 420 Crs
+4135 420 Crs
+4151 420 Crs
+4167 420 Crs
+4183 421 Crs
+4199 421 Crs
+4215 421 Crs
+4231 422 Crs
+4247 422 Crs
+4263 422 Crs
+4279 424 Crs
+4295 423 Crs
+4311 424 Crs
+4327 424 Crs
+4343 423 Crs
+4359 423 Crs
+4375 422 Crs
+4391 422 Crs
+4407 421 Crs
+4423 420 Crs
+4439 420 Crs
+4455 420 Crs
+4471 420 Crs
+4487 420 Crs
+4503 420 Crs
+4519 420 Crs
+4535 420 Crs
+4551 420 Crs
+4567 420 Crs
+4582 420 Crs
+4598 420 Crs
+4614 420 Crs
+4630 420 Crs
+4646 420 Crs
+4662 420 Crs
+4678 420 Crs
+4694 420 Crs
+4710 420 Crs
+4726 420 Crs
+4742 420 Crs
+4758 420 Crs
+4774 420 Crs
+4790 420 Crs
+4806 420 Crs
+4822 420 Crs
+4838 420 Crs
+4854 420 Crs
+4870 420 Crs
+4886 420 Crs
+4902 420 Crs
+4918 420 Crs
+4934 420 Crs
+4950 420 Crs
+4966 420 Crs
+4982 420 Crs
+4998 420 Crs
+5014 420 Crs
+5030 420 Crs
+5046 420 Crs
+5062 420 Crs
+5078 420 Crs
+5094 420 Crs
+5109 420 Crs
+5125 420 Crs
+5141 420 Crs
+5157 420 Crs
+5173 420 Crs
+5189 420 Crs
+5205 420 Crs
+5221 420 Crs
+5237 420 Crs
+5253 420 Crs
+5269 420 Crs
+5285 420 Crs
+5301 420 Crs
+5317 420 Crs
+5333 420 Crs
+5349 420 Crs
+5365 420 Crs
+5381 420 Crs
+5397 420 Crs
+5413 420 Crs
+5429 420 Crs
+5445 420 Crs
+5461 420 Crs
+5477 420 Crs
+5493 420 Crs
+5509 420 Crs
+5525 420 Crs
+5541 420 Crs
+5557 420 Crs
+5573 420 Crs
+5589 420 Crs
+5605 420 Crs
+5621 420 Crs
+5636 420 Crs
+5652 420 Crs
+5668 420 Crs
+5684 420 Crs
+5700 420 Crs
+5716 420 Crs
+5732 420 Crs
+5748 420 Crs
+5764 420 Crs
+5780 420 Crs
+5796 420 Crs
+5812 420 Crs
+5828 420 Crs
+5844 420 Crs
+5860 420 Crs
+5876 420 Crs
+5892 420 Crs
+5908 420 Crs
+5924 420 Crs
+5940 420 Crs
+5956 420 Crs
+5972 420 Crs
+5988 420 Crs
+6004 420 Crs
+6020 420 Crs
+6036 420 Crs
+6052 420 Crs
+6068 420 Crs
+6084 420 Crs
+6100 420 Crs
+6116 420 Crs
+6132 420 Crs
+6148 420 Crs
+6164 420 Crs
+6179 420 Crs
+6195 420 Crs
+6211 420 Crs
+6227 420 Crs
+6243 420 Crs
+6259 420 Crs
+6275 420 Crs
+6291 420 Crs
+6307 420 Crs
+6323 420 Crs
+6339 420 Crs
+6355 420 Crs
+6371 420 Crs
+6387 420 Crs
+6403 420 Crs
+6419 420 Crs
+6435 420 Crs
+6451 420 Crs
+6467 420 Crs
+6483 420 Crs
+6499 420 Crs
+6515 420 Crs
+6531 420 Crs
+6547 420 Crs
+6563 420 Crs
+6579 420 Crs
+6595 420 Crs
+6611 420 Crs
+6627 420 Crs
+6643 420 Crs
+6659 420 Crs
+6675 420 Crs
+6691 420 Crs
+6706 420 Crs
+6722 420 Crs
+6738 420 Crs
+6754 420 Crs
+6770 420 Crs
+6786 420 Crs
+6802 420 Crs
+6818 420 Crs
+6834 420 Crs
+6850 420 Crs
+6866 420 Crs
+6882 420 Crs
+6898 420 Crs
+6914 420 Crs
+6930 420 Crs
+6594 4347 Crs
+1.000 UP
+1.000 UL
+LT2
+LTb
+6311 4207 M
+gsave 0 setgray
+(Local Estimated Rate) Rshow
+grestore
+LT2
+6395 4207 M
+399 0 V
+574 420 M
+16 0 V
+16 0 V
+16 59 V
+16 64 V
+16 55 V
+16 8 V
+16 15 V
+16 174 V
+16 24 V
+16 -45 V
+16 -74 V
+16 -53 V
+16 -9 V
+16 -10 V
+814 480 L
+16 77 V
+15 -16 V
+16 0 V
+16 214 V
+16 30 V
+16 -35 V
+16 10 V
+16 340 V
+16 154 V
+16 22 V
+16 159 V
+16 96 V
+16 22 V
+16 -79 V
+16 -140 V
+16 170 V
+16 165 V
+16 39 V
+16 14 V
+16 -13 V
+16 117 V
+16 45 V
+16 -76 V
+16 9 V
+16 -217 V
+16 16 V
+16 271 V
+16 -52 V
+16 -2 V
+16 210 V
+16 -45 V
+16 179 V
+16 -71 V
+16 271 V
+16 -31 V
+15 232 V
+16 -385 V
+16 1 V
+16 -111 V
+16 -157 V
+16 -96 V
+16 -65 V
+16 -44 V
+16 -113 V
+16 42 V
+16 6 V
+16 -69 V
+16 -116 V
+16 -86 V
+16 4 V
+16 -30 V
+16 -57 V
+16 65 V
+16 -115 V
+16 1 V
+16 -40 V
+16 -16 V
+16 4 V
+16 14 V
+16 18 V
+16 -33 V
+16 -17 V
+16 -14 V
+16 -71 V
+16 -49 V
+16 -43 V
+16 -20 V
+16 46 V
+15 -11 V
+16 86 V
+16 -56 V
+16 6 V
+16 -71 V
+16 -68 V
+16 10 V
+16 -58 V
+16 -51 V
+16 6 V
+16 -35 V
+16 3 V
+16 31 V
+16 -28 V
+16 0 V
+16 -24 V
+16 -24 V
+16 -3 V
+16 -21 V
+stroke
+2203 711 M
+16 -21 V
+16 3 V
+16 -13 V
+16 -28 V
+16 50 V
+16 -20 V
+16 -22 V
+16 -24 V
+16 -15 V
+16 15 V
+16 3 V
+16 -10 V
+16 4 V
+16 7 V
+15 6 V
+16 -2 V
+16 -9 V
+16 -12 V
+16 -9 V
+16 -5 V
+16 -13 V
+16 -17 V
+16 16 V
+16 -24 V
+16 28 V
+16 -10 V
+16 1 V
+16 -1 V
+16 1 V
+16 -21 V
+16 1 V
+16 -2 V
+16 2 V
+16 1 V
+16 -4 V
+16 -14 V
+16 -3 V
+16 -7 V
+16 -8 V
+16 -8 V
+16 -6 V
+16 4 V
+16 -4 V
+16 -11 V
+16 13 V
+16 -8 V
+16 -11 V
+16 -12 V
+15 -8 V
+16 -7 V
+16 9 V
+16 -8 V
+16 3 V
+16 1 V
+16 14 V
+16 1 V
+16 1 V
+16 -3 V
+16 0 V
+16 0 V
+16 3 V
+16 -14 V
+16 -6 V
+16 -3 V
+16 -9 V
+16 -5 V
+16 -8 V
+16 -6 V
+16 7 V
+16 3 V
+16 5 V
+16 -1 V
+16 -5 V
+16 5 V
+16 1 V
+16 12 V
+16 0 V
+16 2 V
+16 1 V
+16 0 V
+16 1 V
+15 -1 V
+16 -9 V
+16 3 V
+16 -9 V
+16 -1 V
+16 -3 V
+16 -3 V
+16 3 V
+16 -2 V
+16 -5 V
+16 -2 V
+16 -5 V
+16 -2 V
+16 -4 V
+16 -6 V
+16 -1 V
+16 0 V
+16 -1 V
+16 2 V
+16 8 V
+16 4 V
+16 -2 V
+16 2 V
+stroke
+3864 444 M
+16 -2 V
+16 1 V
+16 -1 V
+16 -2 V
+16 1 V
+16 1 V
+16 -2 V
+16 0 V
+16 2 V
+16 0 V
+15 -5 V
+16 -1 V
+16 -2 V
+16 -4 V
+16 2 V
+16 -4 V
+16 -1 V
+16 0 V
+16 -3 V
+16 2 V
+16 0 V
+16 2 V
+16 1 V
+16 0 V
+16 1 V
+16 1 V
+16 0 V
+16 1 V
+16 2 V
+16 -4 V
+16 0 V
+16 -1 V
+16 -1 V
+16 0 V
+16 0 V
+16 -5 V
+16 2 V
+16 0 V
+16 0 V
+16 -1 V
+16 -2 V
+16 2 V
+16 0 V
+16 -2 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 0 V
+16 2 V
+16 0 V
+16 3 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 -1 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 3 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 1 V
+16 0 V
+16 0 V
+16 1 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 -1 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+stroke
+5525 420 M
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 1 V
+15 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 1 V
+16 0 V
+16 -1 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 -1 V
+16 0 V
+16 0 V
+16 0 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 1 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 -1 V
+16 -2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+574 420 Star
+590 420 Star
+606 420 Star
+622 479 Star
+638 543 Star
+654 598 Star
+670 606 Star
+686 621 Star
+702 795 Star
+718 819 Star
+734 774 Star
+750 700 Star
+766 647 Star
+782 638 Star
+798 628 Star
+814 480 Star
+830 557 Star
+845 541 Star
+861 541 Star
+877 755 Star
+893 785 Star
+909 750 Star
+925 760 Star
+941 1100 Star
+957 1254 Star
+973 1276 Star
+989 1435 Star
+1005 1531 Star
+1021 1553 Star
+1037 1474 Star
+1053 1334 Star
+1069 1504 Star
+1085 1669 Star
+1101 1708 Star
+1117 1722 Star
+1133 1709 Star
+1149 1826 Star
+1165 1871 Star
+1181 1795 Star
+1197 1804 Star
+1213 1587 Star
+1229 1603 Star
+1245 1874 Star
+1261 1822 Star
+1277 1820 Star
+1293 2030 Star
+1309 1985 Star
+1325 2164 Star
+1341 2093 Star
+1357 2364 Star
+1373 2333 Star
+1388 2565 Star
+1404 2180 Star
+1420 2181 Star
+1436 2070 Star
+1452 1913 Star
+1468 1817 Star
+1484 1752 Star
+1500 1708 Star
+1516 1595 Star
+1532 1637 Star
+1548 1643 Star
+1564 1574 Star
+1580 1458 Star
+1596 1372 Star
+1612 1376 Star
+1628 1346 Star
+1644 1289 Star
+1660 1354 Star
+1676 1239 Star
+1692 1240 Star
+1708 1200 Star
+1724 1184 Star
+1740 1188 Star
+1756 1202 Star
+1772 1220 Star
+1788 1187 Star
+1804 1170 Star
+1820 1156 Star
+1836 1085 Star
+1852 1036 Star
+1868 993 Star
+1884 973 Star
+1900 1019 Star
+1915 1008 Star
+1931 1094 Star
+1947 1038 Star
+1963 1044 Star
+1979 973 Star
+1995 905 Star
+2011 915 Star
+2027 857 Star
+2043 806 Star
+2059 812 Star
+2075 777 Star
+2091 780 Star
+2107 811 Star
+2123 783 Star
+2139 783 Star
+2155 759 Star
+2171 735 Star
+2187 732 Star
+2203 711 Star
+2219 690 Star
+2235 693 Star
+2251 680 Star
+2267 652 Star
+2283 702 Star
+2299 682 Star
+2315 660 Star
+2331 636 Star
+2347 621 Star
+2363 636 Star
+2379 639 Star
+2395 629 Star
+2411 633 Star
+2427 640 Star
+2442 646 Star
+2458 644 Star
+2474 635 Star
+2490 623 Star
+2506 614 Star
+2522 609 Star
+2538 596 Star
+2554 579 Star
+2570 595 Star
+2586 571 Star
+2602 599 Star
+2618 589 Star
+2634 590 Star
+2650 589 Star
+2666 590 Star
+2682 569 Star
+2698 570 Star
+2714 568 Star
+2730 570 Star
+2746 571 Star
+2762 567 Star
+2778 553 Star
+2794 550 Star
+2810 543 Star
+2826 535 Star
+2842 527 Star
+2858 521 Star
+2874 525 Star
+2890 521 Star
+2906 510 Star
+2922 523 Star
+2938 515 Star
+2954 504 Star
+2970 492 Star
+2985 484 Star
+3001 477 Star
+3017 486 Star
+3033 478 Star
+3049 481 Star
+3065 482 Star
+3081 496 Star
+3097 497 Star
+3113 498 Star
+3129 495 Star
+3145 495 Star
+3161 495 Star
+3177 498 Star
+3193 484 Star
+3209 478 Star
+3225 475 Star
+3241 466 Star
+3257 461 Star
+3273 453 Star
+3289 447 Star
+3305 454 Star
+3321 457 Star
+3337 462 Star
+3353 461 Star
+3369 456 Star
+3385 461 Star
+3401 462 Star
+3417 474 Star
+3433 474 Star
+3449 476 Star
+3465 477 Star
+3481 477 Star
+3497 478 Star
+3512 477 Star
+3528 468 Star
+3544 471 Star
+3560 462 Star
+3576 461 Star
+3592 458 Star
+3608 455 Star
+3624 458 Star
+3640 456 Star
+3656 451 Star
+3672 449 Star
+3688 444 Star
+3704 442 Star
+3720 438 Star
+3736 432 Star
+3752 431 Star
+3768 431 Star
+3784 430 Star
+3800 432 Star
+3816 440 Star
+3832 444 Star
+3848 442 Star
+3864 444 Star
+3880 442 Star
+3896 443 Star
+3912 442 Star
+3928 440 Star
+3944 441 Star
+3960 442 Star
+3976 440 Star
+3992 440 Star
+4008 442 Star
+4024 442 Star
+4039 437 Star
+4055 436 Star
+4071 434 Star
+4087 430 Star
+4103 432 Star
+4119 428 Star
+4135 427 Star
+4151 427 Star
+4167 424 Star
+4183 426 Star
+4199 426 Star
+4215 428 Star
+4231 429 Star
+4247 429 Star
+4263 430 Star
+4279 431 Star
+4295 431 Star
+4311 432 Star
+4327 434 Star
+4343 430 Star
+4359 430 Star
+4375 429 Star
+4391 428 Star
+4407 428 Star
+4423 428 Star
+4439 423 Star
+4455 425 Star
+4471 425 Star
+4487 425 Star
+4503 424 Star
+4519 422 Star
+4535 424 Star
+4551 424 Star
+4567 422 Star
+4582 422 Star
+4598 422 Star
+4614 422 Star
+4630 422 Star
+4646 420 Star
+4662 420 Star
+4678 422 Star
+4694 422 Star
+4710 425 Star
+4726 425 Star
+4742 425 Star
+4758 425 Star
+4774 425 Star
+4790 423 Star
+4806 423 Star
+4822 421 Star
+4838 421 Star
+4854 421 Star
+4870 421 Star
+4886 421 Star
+4902 420 Star
+4918 420 Star
+4934 420 Star
+4950 420 Star
+4966 420 Star
+4982 420 Star
+4998 420 Star
+5014 420 Star
+5030 422 Star
+5046 422 Star
+5062 422 Star
+5078 425 Star
+5094 425 Star
+5109 425 Star
+5125 425 Star
+5141 425 Star
+5157 425 Star
+5173 425 Star
+5189 423 Star
+5205 423 Star
+5221 423 Star
+5237 424 Star
+5253 424 Star
+5269 424 Star
+5285 425 Star
+5301 425 Star
+5317 425 Star
+5333 425 Star
+5349 425 Star
+5365 424 Star
+5381 424 Star
+5397 422 Star
+5413 422 Star
+5429 422 Star
+5445 422 Star
+5461 420 Star
+5477 420 Star
+5493 420 Star
+5509 420 Star
+5525 420 Star
+5541 420 Star
+5557 420 Star
+5573 422 Star
+5589 422 Star
+5605 422 Star
+5621 423 Star
+5636 423 Star
+5652 423 Star
+5668 423 Star
+5684 421 Star
+5700 422 Star
+5716 422 Star
+5732 421 Star
+5748 421 Star
+5764 423 Star
+5780 423 Star
+5796 423 Star
+5812 422 Star
+5828 422 Star
+5844 422 Star
+5860 422 Star
+5876 420 Star
+5892 420 Star
+5908 420 Star
+5924 420 Star
+5940 420 Star
+5956 420 Star
+5972 420 Star
+5988 420 Star
+6004 420 Star
+6020 420 Star
+6036 420 Star
+6052 420 Star
+6068 420 Star
+6084 422 Star
+6100 423 Star
+6116 423 Star
+6132 423 Star
+6148 423 Star
+6164 423 Star
+6179 423 Star
+6195 422 Star
+6211 420 Star
+6227 420 Star
+6243 420 Star
+6259 420 Star
+6275 420 Star
+6291 420 Star
+6307 420 Star
+6323 420 Star
+6339 420 Star
+6355 420 Star
+6371 420 Star
+6387 420 Star
+6403 420 Star
+6419 420 Star
+6435 420 Star
+6451 420 Star
+6467 420 Star
+6483 420 Star
+6499 420 Star
+6515 420 Star
+6531 420 Star
+6547 420 Star
+6563 420 Star
+6579 420 Star
+6595 420 Star
+6611 420 Star
+6627 420 Star
+6643 420 Star
+6659 420 Star
+6675 420 Star
+6691 420 Star
+6706 420 Star
+6722 420 Star
+6738 420 Star
+6754 420 Star
+6770 420 Star
+6786 420 Star
+6802 420 Star
+6818 420 Star
+6834 420 Star
+6850 420 Star
+6866 420 Star
+6882 420 Star
+6898 420 Star
+6914 420 Star
+6930 420 Star
+6594 4207 Star
+1.000 UP
+1.000 UL
+LT3
+LTb
+6311 4067 M
+gsave 0 setgray
+(Infected Population * 2000) Rshow
+grestore
+LT3
+6395 4067 M
+399 0 V
+574 441 M
+16 2 V
+16 2 V
+16 6 V
+16 3 V
+16 2 V
+16 4 V
+16 2 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+15 4 V
+16 3 V
+16 0 V
+16 2 V
+16 8 V
+16 11 V
+16 6 V
+16 4 V
+16 4 V
+16 2 V
+16 2 V
+16 9 V
+16 12 V
+16 7 V
+16 8 V
+16 11 V
+16 12 V
+16 9 V
+16 8 V
+16 8 V
+16 11 V
+16 4 V
+16 13 V
+16 16 V
+16 11 V
+16 13 V
+16 14 V
+16 13 V
+16 17 V
+16 19 V
+16 16 V
+16 24 V
+16 27 V
+16 8 V
+15 19 V
+16 19 V
+16 21 V
+16 27 V
+16 21 V
+16 23 V
+16 26 V
+16 23 V
+16 31 V
+16 25 V
+16 23 V
+16 30 V
+16 31 V
+16 23 V
+16 28 V
+16 36 V
+16 10 V
+16 32 V
+16 29 V
+16 40 V
+16 33 V
+16 40 V
+16 53 V
+16 42 V
+16 40 V
+16 31 V
+16 34 V
+16 29 V
+16 34 V
+16 42 V
+16 44 V
+16 42 V
+16 52 V
+15 32 V
+16 42 V
+16 27 V
+16 30 V
+16 50 V
+16 23 V
+16 36 V
+16 25 V
+16 36 V
+16 37 V
+16 38 V
+16 36 V
+16 29 V
+16 32 V
+16 34 V
+16 35 V
+16 25 V
+16 30 V
+16 42 V
+stroke
+2203 2474 M
+16 31 V
+16 23 V
+16 53 V
+16 25 V
+16 25 V
+16 25 V
+16 26 V
+16 35 V
+16 21 V
+16 30 V
+16 25 V
+16 36 V
+16 38 V
+16 31 V
+15 29 V
+16 21 V
+16 32 V
+16 21 V
+16 17 V
+16 19 V
+16 33 V
+16 11 V
+16 40 V
+16 21 V
+16 31 V
+16 29 V
+16 26 V
+16 21 V
+16 16 V
+16 34 V
+16 25 V
+16 23 V
+16 17 V
+16 9 V
+16 19 V
+16 18 V
+16 15 V
+16 13 V
+16 12 V
+16 26 V
+16 14 V
+16 11 V
+16 27 V
+16 13 V
+16 4 V
+16 4 V
+16 13 V
+16 2 V
+15 14 V
+16 13 V
+16 15 V
+16 8 V
+16 19 V
+16 15 V
+16 10 V
+16 15 V
+16 10 V
+16 9 V
+16 12 V
+16 2 V
+16 9 V
+16 8 V
+16 2 V
+16 5 V
+16 4 V
+16 6 V
+16 13 V
+16 10 V
+16 9 V
+16 6 V
+16 0 V
+16 6 V
+16 9 V
+16 18 V
+16 9 V
+16 13 V
+16 12 V
+16 4 V
+16 13 V
+16 8 V
+16 5 V
+15 10 V
+16 2 V
+16 9 V
+16 2 V
+16 8 V
+16 8 V
+16 5 V
+16 4 V
+16 2 V
+16 2 V
+16 4 V
+16 0 V
+16 2 V
+16 2 V
+16 5 V
+16 0 V
+16 4 V
+16 10 V
+16 5 V
+16 2 V
+16 4 V
+16 0 V
+16 4 V
+stroke
+3864 3969 M
+16 4 V
+16 7 V
+16 2 V
+16 4 V
+16 6 V
+16 0 V
+16 9 V
+16 4 V
+16 0 V
+16 2 V
+15 0 V
+16 0 V
+16 2 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 4 V
+16 7 V
+16 0 V
+16 2 V
+16 2 V
+16 2 V
+16 2 V
+16 6 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 3 V
+16 0 V
+16 0 V
+16 4 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 4 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+15 3 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 2 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+stroke
+5525 4072 M
+16 2 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 3 V
+16 2 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+15 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 0 V
+16 2 V
+574 441 Box
+590 443 Box
+606 445 Box
+622 451 Box
+638 454 Box
+654 456 Box
+670 460 Box
+686 462 Box
+702 464 Box
+718 464 Box
+734 464 Box
+750 464 Box
+766 464 Box
+782 464 Box
+798 466 Box
+814 466 Box
+830 466 Box
+845 470 Box
+861 473 Box
+877 473 Box
+893 475 Box
+909 483 Box
+925 494 Box
+941 500 Box
+957 504 Box
+973 508 Box
+989 510 Box
+1005 512 Box
+1021 521 Box
+1037 533 Box
+1053 540 Box
+1069 548 Box
+1085 559 Box
+1101 571 Box
+1117 580 Box
+1133 588 Box
+1149 596 Box
+1165 607 Box
+1181 611 Box
+1197 624 Box
+1213 640 Box
+1229 651 Box
+1245 664 Box
+1261 678 Box
+1277 691 Box
+1293 708 Box
+1309 727 Box
+1325 743 Box
+1341 767 Box
+1357 794 Box
+1373 802 Box
+1388 821 Box
+1404 840 Box
+1420 861 Box
+1436 888 Box
+1452 909 Box
+1468 932 Box
+1484 958 Box
+1500 981 Box
+1516 1012 Box
+1532 1037 Box
+1548 1060 Box
+1564 1090 Box
+1580 1121 Box
+1596 1144 Box
+1612 1172 Box
+1628 1208 Box
+1644 1218 Box
+1660 1250 Box
+1676 1279 Box
+1692 1319 Box
+1708 1352 Box
+1724 1392 Box
+1740 1445 Box
+1756 1487 Box
+1772 1527 Box
+1788 1558 Box
+1804 1592 Box
+1820 1621 Box
+1836 1655 Box
+1852 1697 Box
+1868 1741 Box
+1884 1783 Box
+1900 1835 Box
+1915 1867 Box
+1931 1909 Box
+1947 1936 Box
+1963 1966 Box
+1979 2016 Box
+1995 2039 Box
+2011 2075 Box
+2027 2100 Box
+2043 2136 Box
+2059 2173 Box
+2075 2211 Box
+2091 2247 Box
+2107 2276 Box
+2123 2308 Box
+2139 2342 Box
+2155 2377 Box
+2171 2402 Box
+2187 2432 Box
+2203 2474 Box
+2219 2505 Box
+2235 2528 Box
+2251 2581 Box
+2267 2606 Box
+2283 2631 Box
+2299 2656 Box
+2315 2682 Box
+2331 2717 Box
+2347 2738 Box
+2363 2768 Box
+2379 2793 Box
+2395 2829 Box
+2411 2867 Box
+2427 2898 Box
+2442 2927 Box
+2458 2948 Box
+2474 2980 Box
+2490 3001 Box
+2506 3018 Box
+2522 3037 Box
+2538 3070 Box
+2554 3081 Box
+2570 3121 Box
+2586 3142 Box
+2602 3173 Box
+2618 3202 Box
+2634 3228 Box
+2650 3249 Box
+2666 3265 Box
+2682 3299 Box
+2698 3324 Box
+2714 3347 Box
+2730 3364 Box
+2746 3373 Box
+2762 3392 Box
+2778 3410 Box
+2794 3425 Box
+2810 3438 Box
+2826 3450 Box
+2842 3476 Box
+2858 3490 Box
+2874 3501 Box
+2890 3528 Box
+2906 3541 Box
+2922 3545 Box
+2938 3549 Box
+2954 3562 Box
+2970 3564 Box
+2985 3578 Box
+3001 3591 Box
+3017 3606 Box
+3033 3614 Box
+3049 3633 Box
+3065 3648 Box
+3081 3658 Box
+3097 3673 Box
+3113 3683 Box
+3129 3692 Box
+3145 3704 Box
+3161 3706 Box
+3177 3715 Box
+3193 3723 Box
+3209 3725 Box
+3225 3730 Box
+3241 3734 Box
+3257 3740 Box
+3273 3753 Box
+3289 3763 Box
+3305 3772 Box
+3321 3778 Box
+3337 3778 Box
+3353 3784 Box
+3369 3793 Box
+3385 3811 Box
+3401 3820 Box
+3417 3833 Box
+3433 3845 Box
+3449 3849 Box
+3465 3862 Box
+3481 3870 Box
+3497 3875 Box
+3512 3885 Box
+3528 3887 Box
+3544 3896 Box
+3560 3898 Box
+3576 3906 Box
+3592 3914 Box
+3608 3919 Box
+3624 3923 Box
+3640 3925 Box
+3656 3927 Box
+3672 3931 Box
+3688 3931 Box
+3704 3933 Box
+3720 3935 Box
+3736 3940 Box
+3752 3940 Box
+3768 3944 Box
+3784 3954 Box
+3800 3959 Box
+3816 3961 Box
+3832 3965 Box
+3848 3965 Box
+3864 3969 Box
+3880 3973 Box
+3896 3980 Box
+3912 3982 Box
+3928 3986 Box
+3944 3992 Box
+3960 3992 Box
+3976 4001 Box
+3992 4005 Box
+4008 4005 Box
+4024 4007 Box
+4039 4007 Box
+4055 4007 Box
+4071 4009 Box
+4087 4011 Box
+4103 4011 Box
+4119 4011 Box
+4135 4011 Box
+4151 4013 Box
+4167 4013 Box
+4183 4017 Box
+4199 4024 Box
+4215 4024 Box
+4231 4026 Box
+4247 4028 Box
+4263 4030 Box
+4279 4032 Box
+4295 4038 Box
+4311 4038 Box
+4327 4038 Box
+4343 4038 Box
+4359 4040 Box
+4375 4043 Box
+4391 4043 Box
+4407 4043 Box
+4423 4047 Box
+4439 4047 Box
+4455 4047 Box
+4471 4047 Box
+4487 4047 Box
+4503 4051 Box
+4519 4051 Box
+4535 4051 Box
+4551 4051 Box
+4567 4051 Box
+4582 4051 Box
+4598 4051 Box
+4614 4051 Box
+4630 4051 Box
+4646 4053 Box
+4662 4053 Box
+4678 4055 Box
+4694 4055 Box
+4710 4055 Box
+4726 4055 Box
+4742 4055 Box
+4758 4057 Box
+4774 4057 Box
+4790 4057 Box
+4806 4057 Box
+4822 4057 Box
+4838 4057 Box
+4854 4057 Box
+4870 4057 Box
+4886 4057 Box
+4902 4057 Box
+4918 4057 Box
+4934 4057 Box
+4950 4057 Box
+4966 4057 Box
+4982 4057 Box
+4998 4059 Box
+5014 4059 Box
+5030 4059 Box
+5046 4061 Box
+5062 4061 Box
+5078 4061 Box
+5094 4061 Box
+5109 4064 Box
+5125 4064 Box
+5141 4064 Box
+5157 4064 Box
+5173 4064 Box
+5189 4064 Box
+5205 4066 Box
+5221 4068 Box
+5237 4068 Box
+5253 4070 Box
+5269 4070 Box
+5285 4070 Box
+5301 4070 Box
+5317 4072 Box
+5333 4072 Box
+5349 4072 Box
+5365 4072 Box
+5381 4072 Box
+5397 4072 Box
+5413 4072 Box
+5429 4072 Box
+5445 4072 Box
+5461 4072 Box
+5477 4072 Box
+5493 4072 Box
+5509 4072 Box
+5525 4072 Box
+5541 4074 Box
+5557 4074 Box
+5573 4074 Box
+5589 4076 Box
+5605 4076 Box
+5621 4076 Box
+5636 4076 Box
+5652 4076 Box
+5668 4078 Box
+5684 4078 Box
+5700 4078 Box
+5716 4078 Box
+5732 4080 Box
+5748 4080 Box
+5764 4080 Box
+5780 4080 Box
+5796 4080 Box
+5812 4080 Box
+5828 4080 Box
+5844 4082 Box
+5860 4082 Box
+5876 4082 Box
+5892 4082 Box
+5908 4082 Box
+5924 4082 Box
+5940 4082 Box
+5956 4082 Box
+5972 4082 Box
+5988 4082 Box
+6004 4082 Box
+6020 4082 Box
+6036 4082 Box
+6052 4085 Box
+6068 4087 Box
+6084 4087 Box
+6100 4087 Box
+6116 4087 Box
+6132 4087 Box
+6148 4087 Box
+6164 4087 Box
+6179 4087 Box
+6195 4087 Box
+6211 4087 Box
+6227 4087 Box
+6243 4087 Box
+6259 4087 Box
+6275 4087 Box
+6291 4087 Box
+6307 4087 Box
+6323 4087 Box
+6339 4087 Box
+6355 4087 Box
+6371 4087 Box
+6387 4087 Box
+6403 4087 Box
+6419 4087 Box
+6435 4087 Box
+6451 4087 Box
+6467 4087 Box
+6483 4087 Box
+6499 4087 Box
+6515 4087 Box
+6531 4087 Box
+6547 4087 Box
+6563 4087 Box
+6579 4087 Box
+6595 4087 Box
+6611 4087 Box
+6627 4087 Box
+6643 4087 Box
+6659 4087 Box
+6675 4087 Box
+6691 4087 Box
+6706 4087 Box
+6722 4087 Box
+6738 4087 Box
+6754 4087 Box
+6770 4087 Box
+6786 4087 Box
+6802 4087 Box
+6818 4087 Box
+6834 4087 Box
+6850 4087 Box
+6866 4087 Box
+6882 4087 Box
+6898 4087 Box
+6914 4087 Box
+6930 4089 Box
+6594 4067 Box
+1.000 UL
+LT4
+LTb
+6311 3927 M
+gsave 0 setgray
+(Total Population * 2000) Rshow
+grestore
+LT4
+6395 3927 M
+399 0 V
+574 4620 M
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+1.000 UL
+LT5
+LTb
+6311 3787 M
+gsave 0 setgray
+(Non P2P Members * 2000) Rshow
+grestore
+LT5
+6395 3787 M
+399 0 V
+574 3782 M
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+64 0 V
+64 0 V
+65 0 V
+64 0 V
+64 0 V
+1.000 UL
+LTb
+574 420 M
+6388 0 V
+0 4200 V
+-6388 0 V
+574 420 L
+1.000 UP
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1
