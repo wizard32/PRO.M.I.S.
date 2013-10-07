@@ -114,7 +114,7 @@ echo "plot \"Epidemic_Curve\" with linespoints title \"Epidemic Curve\", \
  \"Global_Estimated_Rate\" with linespoints title \"Global Estimated Rate\" lt -1 pt 6, \"Local_Estimated_Rate\" with linespoints title \"Local Estimated Rate\",\
  \"Infected_Population\" with linespoints title \"Infected Population\",  1 title \"Total Population\" with linespoints lt 1 pointsize 0.5, ($N.0-$p2.0)/$N.0 title \"Non P2P Members\" with linespoints lt 7 pointsize 0.5"  >> plot.plt
 #echo "pause -1" >> plot.plt
-echo "set terminal postscript" >> plot.plt
+echo "set terminal postscript eps enhanced color" >> plot.plt
 echo "set output 'data.ps'" >> plot.plt
 echo "replot" >> plot.plt
 echo "q" >> plot.plt
