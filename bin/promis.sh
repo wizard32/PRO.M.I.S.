@@ -1,2 +1,2 @@
 cd ../classes
-java -Xmx200M Simulation
+java -Xmx300M Simulation
