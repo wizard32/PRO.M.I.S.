@@ -1,0 +1,5 @@
+#Nodes:= 100
+#Class:= FixedGraph
+#Connectivity:= 5
+#Seed:= 3
+#Version:= 2.0
