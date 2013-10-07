@@ -1,8 +1,6 @@
 OVERVIEW
 Network Graphs for Computer Epidemiologists (NGCE) is a tool for the design of
-complex graphs.  A detailed explanation of implementation issues among with
-theoretical aspects of this work is available at:
-http://istlab.dmst.aueb.gr/~vbill/ngce.html
+complex graphs.  
 
 INSTALLATION
 To install, simply download and unzip ngce.zip 
