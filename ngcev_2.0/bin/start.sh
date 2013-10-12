@@ -1,12 +1,10 @@
 #!/bin/sh
 
 clear
-
-
 cd ../classes/
 
-m=c
-while test "$m" != "q" ; do
+flag=c
+while test "$flag" != "q" ; do
 	
 	echo "User: $USER"
 	DATE=`date`
@@ -19,23 +17,28 @@ while test "$m" != "q" ; do
 	echo "\n1: Build Graph"
 	echo "2: Post-processing of the Graph (Analyze)"
 	echo "3: Visualize the Graph structure"
+	echo "4: Exit"
 	echo "-----------------------------------------"
-	read -p  "Enter your choise: " n
+	read -p  "Enter your choice: " answer
 	
-	if test "$n" = "1" ; then
+	if test "$answer" = "1" ; then
 		java -Xmx300M BuildGraph
-	elif test "$n" = "2" ; then
+	elif test "$answer" = "2" ; then
 		java -Xmx300M GraphExplorer
-	elif test "$n" = "3" ; then
+	elif test "$answer" = "3" ; then
 		java -Xmx300M PajekOut
-	elif test "$m" = "q" ; then
-		echo "\nGood Bye!"
+	elif test "$answer" = "4" ; then
+		echo "\nGood Bye..."
+		break
 	else
 		echo "\nWrong Parameter Selected"
 	fi
 	echo "\n"
 	echo "Do you want to continue? c(Continue) q(Quit)"
-	read -p  "Enter your choise: " m
+	read -p  "Enter your choise: " flag
 	clear
+	if test "$flag" = "q" ; then
+		echo "\nGood Bye..."
+	fi
 
 done
