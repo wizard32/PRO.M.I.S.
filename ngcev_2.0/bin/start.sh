@@ -19,7 +19,7 @@ while test "$flag" != "q" ; do
 	echo "3: Visualize the Graph structure"
 	echo "4: Exit"
 	echo "-----------------------------------------"
-	read -p  "Enter your choice: " answer
+	read -p  "Enter your selection: " answer
 	
 	if test "$answer" = "1" ; then
 		java -Xmx300M BuildGraph
