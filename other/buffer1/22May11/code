@@ -1,5 +1,0 @@
-    final int bufferSize = 50;
-    final int incomingSize = 10;
-    final float  minActiveNodesP = 0.11f;
-    final float  tHigh = 0.42f;
-    final float  tLow =  -0.42f;
