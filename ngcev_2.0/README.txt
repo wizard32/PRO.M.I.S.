@@ -1,8 +1,6 @@
 OVERVIEW
 Network Graphs for Computer Epidemiologists (NGCE) is a tool for the design of
-complex graphs.  A detailed explanation of implementation issues among with
-theoretical aspects of this work is available at:
-http://istlab.dmst.aueb.gr/~vbill/ngce.html
+complex graphs.
 
 INSTALLATION
 To install, simply download and unzip ngce.zip 
@@ -130,7 +128,6 @@ installed, with coreutils as bc. Finally to visualize the generated graphs, the
 Pajek tool is a  requisite, which in turn depends on the Wine program in order
 to be executed under the Linux operating system. 
 Software:  
-JRE-> Executes NGCE to generate graphs
 Java SDK-> Builds NGCE
 Bash-> Extracts graph properties
 Gnuplot-> Plots the  probability distribution function
