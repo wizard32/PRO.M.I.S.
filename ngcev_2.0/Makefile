@@ -1,13 +1,13 @@
 
 folders:
-	#Creating Folders
+	#Creating The Proper Directories
 	mkdir classes/ doc/ other/ Plots/
 	chmod 777 -R ./*
 all:
-	#Createting Proper Class Files
+	#Createting The Proper Class Files
 	javac -d ./classes  src/ngce/*.java
 docs:
-	#Createting Proper Doc Files
+	#Createting The Proper Doc Files
 	javadoc -d ./doc ./src/ngce/*.java
 clean:
 	#Cleaning All Simulation Data
