@@ -9,16 +9,18 @@ rm -f ./out.tmp
 rm -f ./finalRate
 
 for i in `ls` 
-	do cd $i
-	pwd
-	THRES=`cat code | tail -n 2 | head -n 1 | awk '{ print $5 ; }'`
-	SURVIVORS=`tail -n 1 P2P | awk '{ print $6 ; }'`
-	echo "THRESHOLD=$THRES"
-	echo "SURVIVORS=$SURVIVORS"
-	echo -e "$THRES\t$SURVIVORS" >> ../temp
-	N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
-	echo "<------------------------------------------------------------------------->"
-	cd ..
+	do if [  -d $i ] ; then
+		cd $i
+		pwd
+		THRES=`cat code | tail -n 2 | head -n 1 | awk '{ print $5 ; }'`
+		SURVIVORS=`tail -n 1 P2P | awk '{ print $6 ; }'`
+		echo "THRESHOLD=$THRES"
+		echo "SURVIVORS=$SURVIVORS"
+		echo -e "$THRES\t$SURVIVORS" >> ../temp
+		N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
+		echo "<------------------------------------------------------------------------->"
+		cd ..
+	fi
 done 
 sort -g temp > survivors.dat
 tr -d 'f ;' <survivors.dat> out.tmp
@@ -35,4 +37,3 @@ echo "set terminal postscript" >> threshold.plt
 echo "set output \"threshold.ps\"" >> threshold.plt
 echo "replot" >> threshold.plt
 echo "q" >> threshold.plt
-

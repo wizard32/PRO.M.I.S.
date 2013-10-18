@@ -90,4 +90,4 @@ sum=0
 #Clear temporary files
 rm -f testfile 
 rm -f tempFile
-rm -f  numericfile 
+rm -f numericfile 

@@ -21,3 +21,7 @@ rm -f ../../other/plots/./*
 
 echo "Cleaning splot directory" 
 rm -f ../../other/splots/./*
+
+#PRO.M.I.S. Results
+echo "Cleaning PRO.M.I.S. Results"
+rm -rf ../../other/com_virology/*

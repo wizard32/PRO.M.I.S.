@@ -9,7 +9,6 @@ rm -f ./incoming.ps
 rm -f ./out.tmp
 rm -f ./all.dat
 
-
 for i in `ls`
 	do if [  -d $i ] ; then
 		cd $i
@@ -37,7 +36,7 @@ echo "set yrange[0:500]" >> incoming.plt
 echo "plot \"incoming.dat\" with linespoints lt -1 pt 6 title \"\"" >> incoming.plt
 echo "pause -1" >> incoming.plt
 echo "set terminal postscript" >> incoming.plt
-echo "set output 'incoming.ps'" >> incoming.plt
+echo "set output \"incoming.ps\"" >> incoming.plt
 echo "replot" >> incoming.plt
 echo "q" >> incoming.plt
 

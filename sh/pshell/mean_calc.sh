@@ -1,6 +1,6 @@
 #find the proper directory
 #first argument is number of nodes, second is graph type
-if [ -d ../../other/plots  ]
+if [ -d ../../other/plots/  ]
 then  	
 	cd ../../other/plots/ 
 else

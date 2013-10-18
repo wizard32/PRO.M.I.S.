@@ -7,6 +7,8 @@
 #This script should be run only once. At the installation of the tool 
 
 #Verification and statistics are mostly for debug purposes
+echo "Creating Com_Virology Directory"
+mkdir ../../other/com_virology
 echo "Creating Verification Directory"
 mkdir ../../other/verification
 echo "Creating Statistics Directory"
@@ -19,5 +21,5 @@ echo "Creating Plot Directory"
 mkdir ../../other/plots
 
 #Creating a directory for benchmark purposes
-echo "Creating Splot Directory" 
+echo "Creating Splot directory" 
 mkdir ../../other/splots

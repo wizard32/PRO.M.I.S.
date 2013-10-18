@@ -36,5 +36,3 @@ echo "set terminal postscript" >> buffer.plt
 echo "set output \"buffer.ps\"" >> buffer.plt
 echo "replot" >> buffer.plt
 echo "q" >> buffer.plt
-
-

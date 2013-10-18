@@ -1,5 +1,6 @@
 #parse all files to create a script that finds the relative protection of peers 
 #intitialsize clean temp files
+
 cd ../../other/$1
 rm -f ./survivors.dat
 rm -f ./temp
@@ -27,10 +28,13 @@ cat out.tmp > survivors.dat
 echo "set title \"Total Population $N Nodes \"" >active.plt
 echo "set xlabel \"Minimum Active Nodes\"" >>active.plt
 echo "set ylabel \"Survived Nodes\"" >>active.plt
-echo "plot \"survivors.dat\" with linespoints lt -1 pt 6" >>active.plt
+#echo "plot \"survivors.dat\" with linespoints lt -1 pt 6" >>active.plt
 echo "pause -1" >>active.plt
-echo "set terminal postscript" >>active.plt
+echo "set terminal postscript eps enhanced color" >>active.plt
 echo "set output \"active.ps\"" >>active.plt
-echo "replot" >>active.plt
+#echo "replot" >>active.plt
+echo "plot \"survivors.dat\" with linespoints lt -1 pt 6" >>active.plt
 echo "q" >>active.plt
+
+gnuplot "active.plt"
 

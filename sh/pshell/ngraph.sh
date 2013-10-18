@@ -7,19 +7,21 @@ rm -f ./temp
 rm -f ./total.plt
 rm -f ./total.ps
 for i in `ls` 
-	do cd $i
-	pwd
-	P2PSIZE=`cat config.txt | tail -n 2 | head -n 1 | awk '{ print $1 ; }' | tr ';' ' '`
-	SURVIVORS=`tail -n 1 P2P | awk '{ print $6 ; }'`
-	echo "P2PSIZE=$P2PSIZE"
-	echo "SURVIVORS=$SURVIVORS"
-	#echo -e "$SURVIVORS\t$P2PSIZE" >> ../temp
-	RATE=`expr "$SURVIVORS/$P2PSIZE" | bc`
-	echo "RATE=$RATE"
-	echo -e "$P2PSIZE\t$SURVIVORS" >> ../temp
-	N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
-	echo "<------------------------------------------------------------------------->"
-	cd ..
+	do if [  -d $i ] ; then  
+		cd $i
+		pwd
+		P2PSIZE=`cat config.txt | tail -n 2 | head -n 1 | awk '{ print $1 ; }' | tr ';' ' '`
+		SURVIVORS=`tail -n 1 P2P | awk '{ print $6 ; }'`
+		echo "P2PSIZE=$P2PSIZE"
+		echo "SURVIVORS=$SURVIVORS"
+		#echo -e "$SURVIVORS\t$P2PSIZE" >> ../temp
+		RATE=`expr "$SURVIVORS/$P2PSIZE" | bc`
+		echo "RATE=$RATE"
+		echo -e "$P2PSIZE\t$SURVIVORS" >> ../temp
+		N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
+		echo "<------------------------------------------------------------------------->"
+		cd ..
+	fi
 done 
 sort -g temp > survivors.dat
 rm -f ./temp
