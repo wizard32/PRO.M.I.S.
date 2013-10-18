@@ -7,17 +7,17 @@
 #This script should be run only once. At the installation of the tool 
 
 #Verification and statistics are mostly for debug purposes
-echo "Creating verification directory"
+echo "Creating Verification Directory"
 mkdir ../../other/verification
-echo "Creating statistics directory"
+echo "Creating Statistics Directory"
 mkdir ../../other/statistics
-echo "Creating temp directory"
+echo "Creating Temp Directory"
 mkdir ../../other/tempfiles
 
 #The crusial information to draw the graphical plots of the simulators outcome
-echo "Creating plot directory" 
+echo "Creating Plot Directory" 
 mkdir ../../other/plots
 
 #Creating a directory for benchmark purposes
-echo "Creating splot directory" 
+echo "Creating Splot Directory" 
 mkdir ../../other/splots
