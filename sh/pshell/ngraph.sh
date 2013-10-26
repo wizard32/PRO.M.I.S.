@@ -1,7 +1,8 @@
-#parse all files to create a script that finds the relative protection of peers 
-#intitialsize clean temp files 
-#taking in to account the p2p size
-cd ../../other/$1
+#Parse all files to create a script that finds the relative protection of peers 
+#Intitialsize clean temp files 
+#Taking in to account the p2p size
+
+cd ../../results/$1
 rm -f ./survivors.dat
 rm -f ./temp
 rm -f ./total.plt
@@ -30,9 +31,10 @@ echo "set title \"Total Population $N Nodes \"" > total.plt
 echo "set xlabel \"P2P Members\"" >> total.plt
 echo "set ylabel \"Survived Nodes\"" >> total.plt
 echo "plot \"survivors.dat\" with linespoints lt -1 pt 6 title \"\"" >> total.plt
-echo "pause -1" >> total.plt
+#echo "pause -1" >> total.plt
 echo "set terminal postscript" >> total.plt
 echo "set output \"total.ps\"" >> total.plt
 echo "replot" >> total.plt
 echo "q" >> total.plt
 
+gnuplot "total.plt"

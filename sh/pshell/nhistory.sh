@@ -1,7 +1,8 @@
-#parse all files to create a script that finds the relative protection of peers 
-#intitialsize clean temp files
-#taken in to account the Buffer buffer size
-cd ../../other/$1
+#Parse all files to create a script that finds the relative protection of peers 
+#Intitialsize clean temp files
+#Taken in to account the Buffer buffer size
+
+cd ../../results/$1
 rm -f ./incoming.dat
 rm -f ./temp
 rm -f ./buffer.plt
@@ -36,3 +37,5 @@ echo "set terminal postscript" >> buffer.plt
 echo "set output \"buffer.ps\"" >> buffer.plt
 echo "replot" >> buffer.plt
 echo "q" >> buffer.plt
+
+gnuplot "buffer.plt"

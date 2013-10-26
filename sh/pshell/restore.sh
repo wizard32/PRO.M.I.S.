@@ -1,8 +1,12 @@
-#restore the results of the simulation to replot them 
-#the format of the directory is 
-#date of month[0-31]
-#month [Jan-Dec]
-#hour [00-23]
+#Restore the results of the simulation to replot them 
+#The format of the directory is:
+#Date of month[0-31]
+#Month [Jan-Dec]
+#Year [20xx]
+#Hour [00-23]
+#Minutes [00-59]
+#Second [00-59]
+
 cd ../../../sh/pshell
 ./clean.sh
 cd -

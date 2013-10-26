@@ -1,7 +1,8 @@
-#parse all files to create a script that finds the relative protection of peers
-#intitialsize clean temp files
-#taken in to account the incoming buffer size
-cd ../../other/$1
+#Parse all files to create a script that finds the relative protection of peers
+#Intitialsize clean temp files
+#Taken in to account the incoming buffer size
+
+cd ../../results/$1
 rm -f ./incoming.dat
 rm -f ./temp
 rm -f ./incoming.plt
@@ -40,4 +41,4 @@ echo "set output \"incoming.ps\"" >> incoming.plt
 echo "replot" >> incoming.plt
 echo "q" >> incoming.plt
 
-
+gnuplot "incoming.plt"

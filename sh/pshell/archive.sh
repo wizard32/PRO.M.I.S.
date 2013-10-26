@@ -1,12 +1,17 @@
-#move the results of the simulation in proper directories
-#the format of the directory is
-#date of month[0-31]
-#month [Jan-Dec]
-#hour [00-23]
+#Authors: Vasileios Vlachos, Liatsis Fotis
+#Date: 24/10/2013
 
+#Move the results of the simulation in proper directories.
+#The format of the directory is:
+#Date of month[0-31]
+#Month [Jan-Dec]
+#Year [20xx]
+#Hour [00-23]
+#Minutes [00-59]
+#Second [00-59]
 
-cd ../../other/plots
-TODAY=`date +%d%h%H%M`
+cd ../../other/plots/
+TODAY=`date +%d%h%Y_%H:%M:%S`
 mkdir ../com_virology/$TODAY
 
 mv ./plot.plt ../com_virology/$TODAY
@@ -16,7 +21,7 @@ mv ./Epidemic_Curve ../com_virology/$TODAY
 mv ./Global_Estimated_Rate ../com_virology/$TODAY
 mv ./Local_Estimated_Rate ../com_virology/$TODAY
 mv ./P2P ../com_virology/$TODAY
-mv ./Unconstraint_Model ../com_virology/$TODAY
+#mv ./Unconstraint_Model ../com_virology/$TODAY
 mv ./data.ps ../com_virology/$TODAY
 mv ./peer.png ../com_virology/$TODAY
 mv ./peer.pdf ../com_virology/$TODAY
@@ -35,5 +40,6 @@ cat tempCode | grep tLow >> code
 
 rm -f ./tempCode
 mv ./code ../../other/com_virology/$TODAY
+
 #cd -
 #./clean.sh

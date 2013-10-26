@@ -1,7 +1,8 @@
-#parse all files to create a script that finds the relative protection of peers 
-#intitialsize clean temp files
-#taken in to account the incoming buffer size
-cd ../../other/$1
+#Parse all files to create a script that finds the relative protection of peers 
+#Intitialsize clean temp files
+#Taken in to account the incoming buffer size
+
+cd ../../results/$1
 rm -f ./all.dat
 rm -f ./temp
 
@@ -16,12 +17,12 @@ for i in `ls`
 		SURVIVORS=`tail -n 1 P2P | awk '{ print $6 ; }'`
 		ACTIVE=`cat code | tail -n 3 | head -n 1 | awk '{ print $5 ; }'`
 		N=`cat statsfile | grep "Total population" | tail -n 1 | awk '{ print $3; }'`
-		echo "SURVIVORS=$SURVIVORS"
-		echo "INCOMINGSIZE=$INCOMINGSIZE"
-		echo "P2PSIZE=$P2PSIZE"
-		echo "BUFFERSIZE=$BUFFERSIZE"
-		echo "ACTIVE=$ACTIVE"
-		echo "Total population=$N"
+		echo "SURVIVORS= $SURVIVORS"
+		echo "INCOMINGSIZE= $INCOMINGSIZE"
+		echo "P2PSIZE= $P2PSIZE"
+		echo "BUFFERSIZE= $BUFFERSIZE"
+		echo "ACTIVE= $ACTIVE"
+		echo "Total population= $N"
 		echo -e "$SURVIVORS\t$INCOMINGSIZE\t\t$P2PSIZE\t\t$BUFFERSIZE\t\t\t$ACTIVE\t\t\t\t\t$N" >> ../temp
 		#echo -e "$SURVIVORS\t$INCOMINGSIZE\t\t$P2PSIZE" >> ../temp
 		#echo $INCOMINGSIZE

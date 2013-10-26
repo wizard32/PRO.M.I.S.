@@ -1,8 +1,8 @@
 #find the proper directory
 #first argument is number of nodes, second is graph type
-if [ -d ../../other/plots/  ]
+if [ -d ../../results/$1/plots/  ]
 then  	
-	cd ../../other/plots/ 
+	cd ../../results/$1/plots/ 
 else
 	echo 'Directory Not Found'
 fi

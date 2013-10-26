@@ -126,7 +126,7 @@ gnuplot "plot.plt"
 
 echo "=stacked;Security Level 1;Security Level 2;Security Level 3;Security Level 4;Security Level 5" > peer.plt
 # green instead of gray since not planning on printing this
-echo "colors=yellow,light_green,cyan,med_blue,black" >> peer.plt
+echo "colors=cyan,yellow,light_green,blue,red" >> peer.plt
 #echo "=patterns" >> peer.plt
 echo "=table" >> peer.plt
 #echo "yformat=%g" >> peer.plt

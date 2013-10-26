@@ -1,4 +1,4 @@
-cd ../../other/splots
+cd ../../results/$1/splots
 
 i=1
 if [ $i -gt 0 ] ; then

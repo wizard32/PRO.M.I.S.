@@ -1,6 +1,7 @@
-#parse all files to create a script that finds the relative protection of peers 
-#intitialsize clean temp files
-cd ../../other/$1
+#Parse all files to create a script that finds the relative protection of peers 
+#Intitialsize clean temp files
+
+cd ../../results/$1
 rm -f ./*.dat
 rm -f ./temp
 rm -f ./threshold.plt
@@ -37,3 +38,5 @@ echo "set terminal postscript" >> threshold.plt
 echo "set output \"threshold.ps\"" >> threshold.plt
 echo "replot" >> threshold.plt
 echo "q" >> threshold.plt
+
+gnuplot "threshold.plt"
