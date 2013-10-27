@@ -7,20 +7,20 @@
 #from previous simulations  
 
 #Verification and statistics are mostly for debug purposes
-echo "Cleaning Verification Directory"
+echo "Cleaning Verification Directory.."
 rm -rf ../../other/verification/./*
-echo "Cleaning Statistics Directory"
+echo "Cleaning Statistics Directory.."
 rm -rf ../../other/statistics/./*
-echo "Cleaning Temp Directory"
+echo "Cleaning Temp Directory.."
 rm -rf ../../other/tempfiles/./*
 
 #The crusial information to draw the graphical plots of the simulators outcome
 echo "Cleaning Plot Directory" 
 rm -rf ../../other/plots/./*
 
-echo "Cleaning Splot Directory" 
+echo "Cleaning Splot Directory.." 
 rm -rf ../../other/splots/./*
 
 #PRO.M.I.S. Results
-echo "Cleaning PRO.M.I.S. Results"
+echo "Cleaning PRO.M.I.S. Results.."
 rm -rf ../../other/com_virology/*
