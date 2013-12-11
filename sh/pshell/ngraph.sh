@@ -2,7 +2,7 @@
 #Intitialsize clean temp files 
 #Taking in to account the p2p size
 
-cd ../../results/$1
+cd ../../results/$1/com_virology/
 rm -f ./survivors.dat
 rm -f ./temp
 rm -f ./total.plt
@@ -30,11 +30,11 @@ rm -f ./temp
 echo "set title \"Total Population $N Nodes \"" > total.plt
 echo "set xlabel \"P2P Members\"" >> total.plt
 echo "set ylabel \"Survived Nodes\"" >> total.plt
-echo "plot \"survivors.dat\" with linespoints lt -1 pt 6 title \"\"" >> total.plt
 #echo "pause -1" >> total.plt
 echo "set terminal postscript" >> total.plt
 echo "set output \"total.ps\"" >> total.plt
-echo "replot" >> total.plt
+echo "plot \"survivors.dat\" with linespoints lt -1 pt 6 title \"\"" >> total.plt
+#echo "replot" >> total.plt
 echo "q" >> total.plt
 
 gnuplot "total.plt"

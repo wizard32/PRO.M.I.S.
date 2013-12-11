@@ -8,8 +8,10 @@ docs:
 	chmod 777 -R ./*
 folders:
 	#Creating The Proper Directories
-	mkdir classes/ doc/ other/ Plots/
-	chmod 777 -R ./*
+	[ -d ./classes ] || mkdir -m 777 classes/
+	[ -d ./doc ] || mkdir -m 777 doc/
+	[ -d ./other ] || mkdir -m 777 other/
+	[ -d ./Plots ] || mkdir -m 777 Plots/
 clean:
 	#Cleaning All Simulation Data
 	rm -f ./classes/*.class 

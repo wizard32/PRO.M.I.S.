@@ -3,6 +3,8 @@
 clear
 cd sh/pshell/
 
+re='^[0-9]+$'
+
 flag=c
 while test "$flag" != "q" ; do
 
@@ -11,67 +13,113 @@ while test "$flag" != "q" ; do
 	echo "$DATE. \n"
 
 	echo "+------------------------------------------------------+"
-	echo "| PRO.M.I.S. - PRoactive Malware Identification System |"
+	echo "|\033[0;33m PRO.M.I.S. - PRoactive Malware Identification System \033[0m|"
 	echo "+------------------------------------------------------+"
 
 	echo "\n1: Run PRO.M.I.S. Simulation"
-	echo "2: Show GraphTopology Information"
-	echo "3: Create Required Folders"
-	echo "4: Remove Previous Simulation Results"
-	echo "5: Configure config file"
-	echo "x:"
-	echo "6: Exit"
-	echo "-------------------------"
+	echo "2: Export PROM.I.S. Results"
+	echo "3: Show GraphTopology Information"
+	echo "4: Show Simulation Results"
+	echo "5: Remove Simulation Results"
+	echo "6: Create Required Folders"
+	echo "7: Edit config file"
+	echo "8: Create Network Graphs (NGCE Tool)"
+	echo "0:\033[1;31m Exit\033[0m"
+	echo "------------------------"
 	read -p  "Enter your selection: " answer
-	echo "-------------------------"
+	echo "------------------------\n"
 	
+	#Run PRO.M.I.S. Simulation Option
 	if test "$answer" = "1" ; then
-		echo "Give Number of PRO.M.I.S. Simulation Time"
-		read -p  "Enter Number: " number
+		read -p "Give Number of PRO.M.I.S. Simulation Time: " number
 		if [ ! -n "$number" ] ; then
-			echo "You didn't enter any number"
-			sleep 2 ; clear
-			continue
+			echo "\nYou didn't enter any number"
+			sleep 2 ; clear ; continue
 		fi
-		echo "Give Folder Name of PRO.M.I.S. Simulation Results"
-		read -p  "Enter Number: " name
+		read -p "Give Folder Name of PRO.M.I.S. Simulation Results: " name
 		if [ ! -n "$name" ] ; then
-			echo "You didn't enter any name"
-			sleep 2 ; clear
-			continue
+			echo "\nYou didn't enter any name"
+			sleep 2 ; clear ; continue
 		fi
 		./xTimesPromis.sh $number $name
-	elif test "$answer" = "5" ; then
-		nano ../../bin/config.txt
-	elif test "$answer" = "3" ; then
-		./init.sh
-	elif test "$answer" = "4" ; then
-		echo "\nAre you sure you want to delete all previous results? y(Yes) n(No)"
-		read -p  "Enter your choise: " delete
-		if test "$delete" = "y" ; then
-			./cleandata.sh
-		fi
-	#elif test "$answer" = "x" ; then
+		clear ; continue
+	
+	#Export PROM.I.S. Results Option
 	elif test "$answer" = "2" ; then
-		clear
-		echo "GraphTopology Specifications"
-		echo "-----------------------------------------\n"
-		INFO=`cat ../../GraphTopology.txt  | head -5 | awk '{ print $0; }'`
-		echo "$INFO"
-		SIZE=$(ls -lah ../../GraphTopology.txt | awk '{ print $5}')
-		echo "#Size:= $SIZE" 
+		echo "Not Yet..!"
+	
+	#Show GraphTopology Information Option
+	elif test "$answer" = "3" ; then
+		if [ -f ../../GraphTopology.txt ] ; then
+			clear
+			echo "GraphTopology Specifications"
+			echo "---------------------------------\n"
+			INFO=`cat ../../GraphTopology.txt  | head -5 | awk '{ print $0; }'`
+			echo "$INFO"
+			SIZE=$(ls -lah ../../GraphTopology.txt | awk '{ print $5}')
+			echo "#Size:= $SIZE"
+		else
+			echo "GraphTopology Specifications\n----------------------------------\n\nGraphTopology file does not exists"
+			sleep 2 ; clear ; continue
+		fi 
+		
+	#Show Simulation Results Option
+	elif test "$answer" = "4" ; then
+		echo "\033[1mPRO.M.I.S. Simulation Results:\n\033[0m"
+		echo "$(ls -lah ../../results/ | awk 'NR>3' | awk '{ print $9 }')"
+		#echo "$CONTENT"
+	
+	#Remove Simulation Results Option			
+	elif test "$answer" = "5" ; then
+		echo "Do you want to delete all simulation results?"
+		echo "Note: This option will permanently delete all simulation data. File(s) cannot be retrieved."
+		read -p "Y(Yes), N(No) : " delete
+		
+		if test "$delete" = "Y" ; then
+			./clean.sh
+			sleep 2 ; clear ; continue
+		elif [ ! "$delete" = "N" ] ; then
+			echo "\nWrong answer..."
+			sleep 2 ; clear ; continue
+		fi
+		
+	#Create Required Folders Option
 	elif test "$answer" = "6" ; then
-		echo "\nGood Bye..."
+		./createfolders.sh
+		sleep 2 ; clear ;continue
+	
+	#Configure config file Option
+	elif test "$answer" = "7" ; then
+		#read -p "Give Maximum Iteration Number: " maxitnumber
+		#read -p "Give Number of P2P Nodes: " prnumber
+		gedit ../../bin/config.txt
+		echo "config.txt file Updated"
+		sleep 2 ; clear ; continue
+	
+	#Create Network Graphs (NGCE Tool)
+	elif test "$answer" = "8" ; then
+		cd ../../ngcev_2.0/
+		make folders all docs 
+		./bin/ngce_start.sh
+		cd ../sh/pshell/
+	#Exit Option
+	elif test "$answer" = "0" ; then
+		echo "\033[0;34m\nGood Bye...\033[0m"
 		break
 	else
 		echo "\nWrong Parameter Selected"
 	fi
+	
 	echo "\n"
-	echo "Do you want to continue? c(Continue) q(Quit)"
-	read -p  "Enter your choise: " flag
-	clear
-	if test "$flag" = "q" ; then
-		echo "\nGood Bye..."
+	read -p "Do you want to continue [Y/n]? " flag
+	
+	if test "$flag" = "n" ; then
+		echo "\033[0;34m\nGood Bye...\033[0m"
+		break
+	elif [ ! "$flag" = "Y" ] ; then
+			echo "\nWrong answer..."
+			sleep 2 ; clear ; continue
 	fi
+	clear
 done
 

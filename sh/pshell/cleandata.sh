@@ -1,3 +1,4 @@
+#!/bin/sh
 #Authors: Vasileios Vlachos, Liatsis Fotis
 #Date: 24/10/2013
 
@@ -6,21 +7,23 @@
 #This script should be run only once if you want to remove all stored results
 #from previous simulations  
 
+echo "\nCleaning Temporary Directories\n---------------------------------"
+
+#PRO.M.I.S. Results
+echo "- Com_Virology"
+rm -rf ../../other/com_virology/*
+
 #Verification and statistics are mostly for debug purposes
-echo "Cleaning Verification Directory.."
+echo "- Verification"
 rm -rf ../../other/verification/./*
-echo "Cleaning Statistics Directory.."
+echo "- Statistics"
 rm -rf ../../other/statistics/./*
-echo "Cleaning Temp Directory.."
+echo "- Temp"
 rm -rf ../../other/tempfiles/./*
 
 #The crusial information to draw the graphical plots of the simulators outcome
-echo "Cleaning Plot Directory" 
+echo "- Plot" 
 rm -rf ../../other/plots/./*
 
-echo "Cleaning Splot Directory.." 
+echo "- Splot" 
 rm -rf ../../other/splots/./*
-
-#PRO.M.I.S. Results
-echo "Cleaning PRO.M.I.S. Results.."
-rm -rf ../../other/com_virology/*

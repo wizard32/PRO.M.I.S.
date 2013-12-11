@@ -4,7 +4,7 @@
 #Make the required folders in order to store the simulation outcomes in a prore way
 
 #This script should be run only once. At the installation of the tool
-echo "\nCreating Other Directory..." 
+echo "Creating Other Directory..." 
 [ -d ../../other ] || mkdir -m 777 ../../other
 echo "Creating Results Directory..."
 [ -d ../../results ] || mkdir -m 777 ../../results

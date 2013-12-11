@@ -2,7 +2,7 @@
 #Intitialsize clean temp files
 #Taken in to account the Buffer buffer size
 
-cd ../../results/$1
+cd ../../results/$1/com_virology/
 rm -f ./incoming.dat
 rm -f ./temp
 rm -f ./buffer.plt

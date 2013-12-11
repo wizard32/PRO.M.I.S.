@@ -2,7 +2,7 @@
 #Intitialsize clean temp files
 #Taken in to account the incoming buffer size
 
-cd ../../results/$1
+cd ../../results/$1/com_virology/
 rm -f ./all.dat
 rm -f ./temp
 

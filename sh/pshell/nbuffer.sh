@@ -1,7 +1,7 @@
 #Parse all files to create a script that finds the relative protection of peers 
 #Intitialsize clean temp files
 
-cd ../../results/$1
+cd ../../results/$1/com_virology/
 rm -f ./buffer.dat
 rm -f ./temp
 rm -f ./buffer.plt
@@ -30,7 +30,7 @@ echo "set title \"Total Population $N Nodes \"" > buffer.plt
 echo "set xlabel \"Promis P2P max queries per node\"" >> buffer.plt
 echo "set ylabel \"Survived Nodes\"" >> buffer.plt
 #echo "plot \"buffer.dat\" with linespoints lt -1 pt 6" >> buffer.plt
-echo "pause -1" >> buffer.plt
+#echo "pause -1" >> buffer.plt
 echo "set terminal postscript" >> buffer.plt
 echo "set output \"buffer.ps\"" >> buffer.plt
 #echo "replot" >> buffer.plt

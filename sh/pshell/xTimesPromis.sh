@@ -12,12 +12,13 @@ do
     echo $(($x+1)) execution of the Promis simulator ; sleep 1
 	./promis.sh && cd ../sh/pshell/ && ./dothemagic.sh 100 100 && ./archive.sh && cd ../../bin/
 	x=`echo "$x + 1" | bc`
-	sleep 3
 done
 
-#Moving Promis Simulation Files to the Result Directory 
-mv ../other/* ../results/$2
+#Copying Promis Simulation Files to the Results Directory 
+cp -R ../other/* ../results/$2
 chmod 777 -R ../results/*
-#Make the required folders in order to store the simulation outcomes in a prore way
+
+#Removing Temporary Stored Results
 cd ../sh/pshell/
-./createfolders.sh
+./cleandata.sh ; sleep 2
+
