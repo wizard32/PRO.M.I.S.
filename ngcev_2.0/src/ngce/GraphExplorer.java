@@ -310,15 +310,15 @@ public class GraphExplorer {
 
                 System.out.println("Date is " + time);
 
-                gnuTitle = "graph:ngce?modeltype=" + type + "&nodes=" + nodes;
+                gnuTitle = "Graph:NGCE Modeltype=" + type + "\\nNodes=" + nodes;
                 //date.get
 
                 if (type.equals("ERGraph")) {
-                    title.write("set title \"" + gnuTitle + "&probability=" + probability + "&edges=" + edges +
-                                "&seed=" + seed + "&version=" + version + "\"\n");
+                    title.write("set title \"" + gnuTitle + " Probability=" + probability + " Edges=" + edges +
+                                " Seed=" + seed + " Version=" + version + "\"\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
-                    title.write("set term postscript eps\n");
+                    //title.write("set term postscript eps enhanced color\n");
                     title.write("set output \"../Plots/" + id +".eps\"\n");
                     fw.close();
                     er = new FileReader("../other/NGCE_Output");
@@ -340,67 +340,70 @@ public class GraphExplorer {
                     title.write("Poisson(x)=mu**x*exp(-mu)/i(x)!\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
+                    //title.write("plot \"NGCE_Output\", Poisson(x)\n");
+                    title.write("set term postscript eps enhanced color\n");
                     title.write("plot \"NGCE_Output\", Poisson(x)\n");
-                    title.write("set term x11\n");
-                    title.write("plot \"NGCE_Output\", Poisson(x)\n");
+                    title.write("q\n");
 
-                    title.write("pause 15 \"Hit return to continue\"");
 
                 } else if (type.equals("Homogenous")) {
-                    title.write("set title \"" + gnuTitle + "&version=" + version + "\"\n");
+                    title.write("set title \"" + gnuTitle + " Version=" + version + "\"\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
-                    title.write("set term postscript eps\n");
+                    //title.write("set term postscript eps\n");
                     title.write("set output \"../Plots/" + id +".eps\"\n");
+                    //If it's only necessary enable it
+                    //title.write("set logscale\n");
+                    //title.write("plot \"NGCE_Output\"\n");
+                    title.write("set term postscript eps enhanced color\n");
                     title.write("plot \"NGCE_Output\"\n");
-                    title.write("set term x11\n");
-                    title.write("plot \"NGCE_Output\"\n");
-
-                    title.write("pause 15 \"Hit return to continue\"");
+                    title.write("q\n");
 
                     //echo "set title \"$string&version=$version\"" > plotGraph.plt
 
                 } else if (type.equals("FixedGraph")) {
-                    title.write("set title \"" + gnuTitle + "&neighbours=" + neighbors + "&seed=" + seed +
-                                "&version=" + version + "\"\n");
+                    title.write("set title \"" + gnuTitle + " Neighbours=" + neighbors + " Seed=" + seed +
+                                " Version=" + version + "\"\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
-                    title.write("set term postscript eps\n");
+                    //title.write("set term postscript eps\n");
                     title.write("set output \"../Plots/" + id +".eps\"\n");
+                    //If it's only necessary enable it
+                    //title.write("set logscale\n");
+                    //title.write("plot \"NGCE_Output\"\n");
+                    title.write("set term postscript eps enhanced color\n");
                     title.write("plot \"NGCE_Output\"\n");
-                    title.write("set term x11\n");
-                    title.write("plot \"NGCE_Output\"\n");
+                    title.write("q\n");
 
-                    title.write("pause 15 \"Hit return to continue\"");
 
                 } else if (type.equals("ScaleFreeGraph")) {
-                    title.write("set title \"" + gnuTitle + "&edges=" + edges + "&seed=" + seed +
-                                "&version=" + version + "\"\n");
+                    title.write("set title \"" + gnuTitle + " Edges=" + edges + " Seed=" + seed +
+                                " Version=" + version + "\"\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
-                    title.write("set term postscript eps\n");
+                    //title.write("set term postscript eps enhanced color\n");
                     title.write("set output \"../Plots/" + id +".eps\"\n");
                     title.write("set logscale\n");
+                    //title.write("plot \"NGCE_Output\"\n");
+                    title.write("set term postscript eps enhanced color\n");
                     title.write("plot \"NGCE_Output\"\n");
-                    title.write("set term x11\n");
-                    title.write("plot \"NGCE_Output\"\n");
+                    title.write("q\n");
 
-                    title.write("pause 15 \"Hit return to continue\"");
 
                 } else if (type.equals("FullScaleFreeGraph")) {
-                    title.write("set title \"" + gnuTitle + "&initialNodes=" + initial + "&m=" + mi
-                                + "&seed=" + seed + "&version=" + version + "\"\n");
-                    title.write("set term postscript eps\n");
+                    title.write("set title \"" + gnuTitle + " InitialNodes=" + initial + " m=" + mi
+                                + " Seed=" + seed + " Version=" + version + "\"\n");
+                    //title.write("set term postscript eps\n");
                     title.write("set output \"../Plots/" + id +".eps\"\n");
                     title.write("set logscale\n");
                     title.write("set ylabel \'Connectivity Probability\'\n");
                     title.write("set xlabel \'Nodes\' \n");
 
+                    //title.write("plot \"NGCE_Output\"\n");
+                    title.write("set term postscript eps enhanced color\n");
                     title.write("plot \"NGCE_Output\"\n");
-                    title.write("set term x11\n");
-                    title.write("plot \"NGCE_Output\"\n");
+                    title.write("q\n");
 
-                    title.write("pause 15 \"Hit return to continue\"");
 
                 } else {
                     System.out.println("Unknown Graph - Error");

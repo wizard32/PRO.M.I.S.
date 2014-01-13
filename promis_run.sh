@@ -99,9 +99,9 @@ while test "$flag" != "q" ; do
 	#Create Network Graphs (NGCE Tool)
 	elif test "$answer" = "8" ; then
 		cd ../../ngcev_2.0/
-		make folders all docs 
-		./bin/ngce_start.sh
-		cd ../sh/pshell/
+		make clean folders all docs 
+		cd bin/; ./ngce_start.sh
+		cd ../../sh/pshell/
 	#Exit Option
 	elif test "$answer" = "0" ; then
 		echo "\033[0;34m\nGood Bye...\033[0m"
