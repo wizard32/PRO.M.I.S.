@@ -10,7 +10,7 @@ while [ $x -lt $1 ]
 do
     clear
     echo $(($x+1)) execution of the Promis simulator ; sleep 1
-	./promis.sh && cd ../sh/pshell/ && ./dothemagic.sh 100 100 && ./archive.sh && cd ../../bin/
+	./promis.sh && cd ../sh/pshell/ && ./dothemagic.sh 170 170 && ./archive.sh && cd ../../bin/
 	x=`echo "$x + 1" | bc`
 done
 

@@ -14,7 +14,7 @@ public class Node {
 
 
     final int bufferSize = 10;
-    final int incomingSize = 320;
+    final int incomingSize = 120;
     final float  minActiveNodesP = 0.11f;
 
     protected double lRate = 0;

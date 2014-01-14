@@ -1,6 +1,6 @@
- if [[ $# -lt 2 ]] ;
-    then echo "Usage:  dothemagic [xtimeslots xtimeslots]" 1>&2; exit
-  fi
+ #if [[ $# -lt 2 ]] ;
+ #   then echo "Usage:  dothemagic [xtimeslots xtimeslots]" 1>&2; exit
+  #fi
 
 
 cd ../../other/plots

@@ -1081,8 +1081,8 @@ public class Simulation {
                 Simulation.flashGRBuffer();
                 
                 
-                System.out.println("num of inf= " + Simulation.getNumberOfInfected());
-                System.out.println("infection rate=: " + (double) Simulation.getNumberOfInfected() / NumOfVertices);
+                System.out.println("Num of Infected= " + Simulation.getNumberOfInfected());
+                System.out.println("Infection Rate=: " + (double) Simulation.getNumberOfInfected() / NumOfVertices);
                 if (Simulation.getSelfdestruct()) {
                     System.out.println("PROMIS Simulator Finished");
                     System.exit(0);
