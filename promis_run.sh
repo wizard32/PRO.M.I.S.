@@ -1,5 +1,10 @@
 #!/bin/sh
 
+/*
+	@creator Liatsis Fotis
+	liatsisfotis at Gmail dot com
+*/
+
 clear
 cd sh/pshell/
 
