@@ -1,5 +1,10 @@
 #!/bin/sh
 
+/*
+	@creator Liatsis Fotis
+	liatsisfotis at Gmail dot com
+*/
+
 clear
 cd ../classes/
 
@@ -17,7 +22,8 @@ while test "$flag" != "q" ; do
 	echo "\n1: Build Graph"
 	echo "2: Post-processing of the Graph (Analyze)"
 	echo "3: Visualize the Graph structure"
-	echo "4: ReadMe File"
+	echo "4: Edit config file"
+	echo "5: ReadMe File"
 	echo "0: \033[1;31mExit\033[0m"
 	echo "------------------------"
 	read -p  "Enter your selection: " answer
@@ -37,9 +43,15 @@ while test "$flag" != "q" ; do
 	#Visualize the Graph structure Option
 	elif test "$answer" = "3" ; then
 		java -Xmx300M PajekOut
-		
-	#ReadMe File Option
+	
+	#Edit config file Option
 	elif test "$answer" = "4" ; then
+		gedit ../bin/config.txt
+		echo "config.txt file Updated"
+		sleep 2 ; clear ; continue
+			
+	#ReadMe File Option
+	elif test "$answer" = "5" ; then
 		less ../README.txt
 	
 	#Exit Option
