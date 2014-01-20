@@ -5,7 +5,7 @@ cd sh/pshell/
 
 re='^[0-9]+$'
 
-flag=c
+flag=Y
 while test "$flag" != "q" ; do
 
 	echo "User: $USER"
@@ -24,6 +24,7 @@ while test "$flag" != "q" ; do
 	echo "6: Create Required Folders"
 	echo "7: Edit config file"
 	echo "8: Create Network Graphs (NGCE Tool)"
+	echo "9: ReadMe File"
 	echo "0:\033[1;31m Exit\033[0m"
 	echo "------------------------"
 	read -p  "Enter your selection: " answer
@@ -90,8 +91,6 @@ while test "$flag" != "q" ; do
 	
 	#Configure config file Option
 	elif test "$answer" = "7" ; then
-		#read -p "Give Maximum Iteration Number: " maxitnumber
-		#read -p "Give Number of P2P Nodes: " prnumber
 		gedit ../../bin/config.txt
 		echo "config.txt file Updated"
 		sleep 2 ; clear ; continue
@@ -100,8 +99,13 @@ while test "$flag" != "q" ; do
 	elif test "$answer" = "8" ; then
 		cd ../../ngcev_2.0/
 		make clean folders all docs 
-		cd bin/; ./ngce_start.sh
+		cd bin/; ./ngce_run.sh
 		cd ../../sh/pshell/
+		
+	#ReadMe File Option
+	elif test "$answer" = "9" ; then
+		less ../../README
+		pwd
 	#Exit Option
 	elif test "$answer" = "0" ; then
 		echo "\033[0;34m\nGood Bye...\033[0m"
